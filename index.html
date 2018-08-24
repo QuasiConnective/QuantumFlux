@@ -7,7 +7,11 @@
       var partdisp = 0;
       function incr(x){
         part += x;
-        partdisp = part.toExponential(2);
+        if (part >= 1000){
+          partdisp = part.toExponential(2);
+        } else {
+          partdisp = part;
+        }
         document.getElementById("partdisp").innerHTML = partdisp;
       }
       function inc(){
