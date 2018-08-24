@@ -59,15 +59,13 @@
           }
         }
       }
-      function mf(x,y){
-        if (x === 0){
-          t1f += y;
-          document.getElementById("t1f").innerHTML= t1f;
-        }
+      function mf1(x){
+        t1f += x;
+        document.getElementById("t1f").innerHTML= t1f;
       }
       setInterval(function(){incr(0.05*t1f);},50);
       setInterval(function(){upd();},50);
-      setInterval(function(){mf(0,t2f);},1000);
+      setInterval(function(){mf1(t2f);},1000);
     </script>
   </head>
   <body>
