@@ -41,7 +41,17 @@
           a.style.display ="none"
         }
       }
-      setInterval(function(){incr(0.05);},50);
+      var t1f = 1;
+      function prchf(x){
+        if (x === 0){
+          if (part >= 10){
+            part -= 10;
+            t1f += 1;
+            document.getElementById("t1f").innerHTML= t1f;
+          }
+        }
+      }
+      setInterval(function(){incr(0.05*t1f);},50);
       setInterval(function(){upd();},50);
     </script>
   </head>
@@ -69,6 +79,7 @@
     </div>
     <div id="gs1">
       <h3>Fluctuators</h3>
+      <p><a id="t1f>1</a><f>
     </div>
     <div id="gs2">
       <h3>Particles</h3>
