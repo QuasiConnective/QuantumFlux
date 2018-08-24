@@ -10,7 +10,7 @@
         if (part >= 1000){
           partdisp = part.toExponential(2);
         } else {
-          partdisp = part;
+          partdisp = math.Round(part);
         }
         document.getElementById("partdisp").innerHTML = partdisp;
       }
