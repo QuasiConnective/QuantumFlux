@@ -10,16 +10,14 @@
         if (part >= 1000){
           partdisp = part.toExponential(2);
         } else {
-          partdisp = part.toFixed(2);
+          partdisp = part.toFixed(0);
         }
         document.getElementById("partdisp").innerHTML = partdisp;
       }
-      function inc(){
-        setInterval(function(){incr(0.05);},50);
-      }
+      setInterval(function(){incr(0.05);},50);
     </script>
   </head>
-  <body onLoad="inc()">
+  <body>
     <header>
       <h2>Quantum Flux</h2>
       <p><a id="partdisp">0</a> particles</p>
