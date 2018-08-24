@@ -3,22 +3,22 @@
   <head>
     <title>Quantum Flux</title>
     <script>
-      var part = 10;
-      var partdisp = 10;
+      var part = 0;
+      var partdisp = 0;
       function incr(x){
         part += x;
         partdisp = part.toExponential(2);
         document.getElementById("partdisp").innerHTML = partdisp;
       }
       function inc(){
-        setInterval(function(){incr(1);},1000);
+        setInterval(function(){incr(0.05);},50);
       }
     </script>
   </head>
   <body onLoad="inc()">
     <header>
       <h2>Quantum Flux</h2>
-      <p><a id="partdisp">10</a></p>
+      <p><a id="partdisp">0</a></p>
     </header>
   </body>
 </html>
