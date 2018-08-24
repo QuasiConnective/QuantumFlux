@@ -59,14 +59,14 @@
           }
         }
       }
-      function mf(x){
+      function mf(x,y){
         if (x === 0){
-          t1f += 1;
+          t1f += y;
         }
       }
       setInterval(function(){incr(0.05*t1f);},50);
       setInterval(function(){upd();},50);
-      setInterval(function(){mf(0);},1000);
+      setInterval(function(){mf(0,t2f);},1000);
     </script>
   </head>
   <body>
