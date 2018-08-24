@@ -62,6 +62,7 @@
       function mf(x,y){
         if (x === 0){
           t1f += y;
+          document.getElementById("t1f").innerHTML= t1f;
         }
       }
       setInterval(function(){incr(0.05*t1f);},50);
