@@ -14,8 +14,32 @@
         }
         document.getElementById("partdisp").innerHTML = partdisp;
       }
-      var gamestate = 0;
+      var gs = 0;
+      function cgs(x){
+        gs = x;
+      }
       function upd(){
+        if (gs === 0){
+          var a = document.getElementById("gs0");
+          a.style.display ="none"
+        } else{
+          var a = document.getElementById("gs0");
+          a.style.display ="block"
+        }
+        if (gs === 1){
+          var a = document.getElementById("gs1");
+          a.style.display ="none"
+        } else{
+          var a = document.getElementById("gs1");
+          a.style.display ="block"
+        }
+        if (gs === 2){
+          var a = document.getElementById("gs2");
+          a.style.display ="none"
+        } else{
+          var a = document.getElementById("gs2");
+          a.style.display ="block"
+        }
       }
       setInterval(function(){incr(0.05);},50);
       setInterval(function(){upd();},50);
@@ -28,9 +52,9 @@
     </header>
     <hr>
     <nav>
-      <button type="button" onClick="">Story</button>
-      <button type="button" onClick="">Fluctuators</button>
-      <button type="button" onClick="">Particles</button>
+      <button type="button" onClick="cgs(0)">Story</button>
+      <button type="button" onClick="cgs(1)">Fluctuators</button>
+      <button type="button" onClick="cgs(2)">Particles</button>
     </nav>
     <hr>
     <div id="gs0">
