@@ -10,10 +10,9 @@
         partdisp = part.toExponential(2);
         document.getElementById("partdisp").innerHTML = partdisp;
       }
-      setInterval(function(){incr(1);},1000);
     </script>
   </head>
-  <body>
+  <body onLoad="setInterval(function(){incr(1);},1000);">
     <header>
       <h2>Quantum Flux</h2>
       <p><a id="part">10</a></p>
