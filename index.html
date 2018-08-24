@@ -14,7 +14,11 @@
         }
         document.getElementById("partdisp").innerHTML = partdisp;
       }
+      var gamestate = 0;
+      function upd(){
+      }
       setInterval(function(){incr(0.05);},50);
+      setInterval(function(){upd();},50);
     </script>
   </head>
   <body>
@@ -24,10 +28,19 @@
     </header>
     <hr>
     <nav>
+      <button type="button" onClick="">Story</button>
       <button type="button" onClick="">Fluctuators</button>
-      <button type="button" onClick="">Particle Types</button>
-      <button type="button" onClick="">Prestige</button>
+      <button type="button" onClick="">Particles</button>
     </nav>
     <hr>
+    <div id="gs0">
+      <h3>Story</h3>
+    </div>
+    <div id="gs1">
+      <h3>Fluctuators</h3>
+    </div>
+    <div id="gs2">
+      <h3>Particles</h3>
+    </div>
   </body>
 </html>
