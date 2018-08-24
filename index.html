@@ -42,6 +42,7 @@
         }
       }
       var t1f = 1;
+      var t2f = 0;
       function prchf(x){
         if (x === 0){
           if (part >= 10){
@@ -50,9 +51,22 @@
             document.getElementById("t1f").innerHTML= t1f;
           }
         }
+        if (x === 1){
+          if (part >= 1000){
+            part -= 1000;
+            t1f += 2;
+            document.getElementById("t2f").innerHTML= t2f;
+          }
+        }
+      }
+      function mf(x){
+        if (x === 0){
+          t1f += 1;
+        }
       }
       setInterval(function(){incr(0.05*t1f);},50);
       setInterval(function(){upd();},50);
+      setInterval(function(){mf(0);},1000);
     </script>
   </head>
   <body>
@@ -80,6 +94,7 @@
     <div id="gs1">
       <h3>Fluctuators</h3>
       <p><a id="t1f">1</a> <button type="button" onClick="prchf(0)">Quantum Field Interaction Device 10₽</button></p>
+      <p><a id="t2f">0</a> <button type="button" onClick="prchf(1)">Auto-Materialiser 1e+3₽</button></p>
     </div>
     <div id="gs2">
       <h3>Particles</h3>
