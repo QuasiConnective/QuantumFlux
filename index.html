@@ -77,6 +77,10 @@
       var t2f = 0;
       var t3f = 0;
       var t4f = 0;
+      var t5f = 0;
+      var t6f = 0;
+      var t7f = 0;
+      var t8f = 0;
       function prchf(x){
         if (x === 0){
           if (part >= 10){
@@ -104,6 +108,33 @@
             part -= 1000000000;
             t4f += 1;
             document.getElementById("t4f").innerHTML= t4f;
+          }
+        if (x === 4){
+          if (part >= 100000000000){
+            part -= 100000000000;
+            t5f += 1;
+            document.getElementById("t5f").innerHTML= t5f;
+          }
+        }
+        if (x === 5){
+          if (part >= 10000000000000){
+            part -= 10000000000000;
+            t6f += 1;
+            document.getElementById("t6f").innerHTML= t6f;
+          }
+        }
+        if (x === 6){
+          if (part >= 1000000000000000){
+            part -= 1000000000000000;
+            t7f += 1;
+            document.getElementById("t7f").innerHTML= t7f;
+          }
+        }
+        if (x === 7){
+          if (part >= 100000000000000000){
+            part -= 100000000000000000;
+            t8f += 1;
+            document.getElementById("t8f").innerHTML= t8f;
           }
         }
       }
@@ -170,6 +201,10 @@
       <p><a id="t2f">0</a> <button type="button" onClick="prchf(1)">Auto-Materialiser 1e+3₽</button></p>
       <p><a id="t3f">0</a> <button type="button" onClick="prchf(2)">AM Factory 1e+6₽</button></p>
       <p><a id="t4f">0</a> <button type="button" onClick="prchf(3)">Automatic Factory Builder 1e+9₽</button></p>
+      <p><a id="t5f">0</a></p>
+      <p><a id="t6f">0</a></p>
+      <p><a id="t7f">0</a></p>
+      <p><a id="t8f">0</a></p>
     </div>
     <div id="gs2">
       <h3>Particles</h3>
