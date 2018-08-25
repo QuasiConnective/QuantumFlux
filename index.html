@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -52,24 +51,32 @@
         }
       }
       function upd2(){
-        if (part >= 1000){
+        if (tot >= 1000){
           var a = document.getElementById("s2");
           a.style.display ="block"
         } else{
           var a = document.getElementById("s2");
           a.style.display ="none"
         }
-        if (part >= 1000000){
+        if (tot >= 1000000){
           var a = document.getElementById("s3");
           a.style.display ="block"
         } else{
           var a = document.getElementById("s3");
+          a.style.display ="none"
+        }
+        if (tot >= 1000000000){
+          var a = document.getElementById("s4");
+          a.style.display ="block"
+        } else{
+          var a = document.getElementById("s4");
           a.style.display ="none"
         }
       }
       var t1f = 1;
       var t2f = 0;
       var t3f = 0;
+      var t4f = 0;
       function prchf(x){
         if (x === 0){
           if (part >= 10){
@@ -92,6 +99,13 @@
             document.getElementById("t3f").innerHTML= t3f;
           }
         }
+        if (x === 3){
+          if (part >= 1000000000){
+            part -= 1000000000;
+            t4f += 1;
+            document.getElementById("t4f").innerHTML= t4f;
+          }
+        }
       }
       function mf1(x){
         t1f += x;
@@ -101,10 +115,15 @@
         t2f += x;
         document.getElementById("t2f").innerHTML= t2f;
       }
+      function mf3(x){
+        t3f += x;
+        document.getElementById("t3f").innerHTML= t3f;
+      }
       setInterval(function(){incr(0.05*t1f);},50);
       setInterval(function(){upd();},50);
       setInterval(function(){mf1(t2f);},1000);
       setInterval(function(){mf2(t3f);},1000);
+      setInterval(function(){mf3(t4f);},1000);
       setInterval(function(){upd2();},50);
     </script>
   </head>
@@ -133,12 +152,16 @@
       <div id="s2">
         <p>You've made a thousand particles, but it must get annoying turning them into qfids. <br>
            Hey, I've got an idea. Use your particles to make something to make qfids for you! <br>
-           I'm a genius, I'm gonna go study things beyond the Standard Model of Particle Physics. </p>
+           I'm a genius, I'm gonna go study things beyond the Standard Model of Particle Physics... </p>
       </div>
       <div id="s3">
         <p>A million particles now, your parents mus be proud of your progress, but let me tell you a secret. <br>
            What if you could use these particles on a factory to make qfid makers. Think of the cubic growth! <br>
            Seeing as I'm so smart, I'm gonna go discover new things beyond the SMOPP... </p>
+      </div>
+      <div id="s4">
+        <p>I have had another stroke of genius, you know those factories, what if you had an auto factory builder!<br>
+           Oh, yeah; congrats on a billion particles or whatever, i'm gonna go study string theory... </p>
       </div>
     </div>
     <div id="gs1">
@@ -146,6 +169,7 @@
       <p><a id="t1f">1</a> <button type="button" onClick="prchf(0)">Quantum Field Interaction Device 10₽</button></p>
       <p><a id="t2f">0</a> <button type="button" onClick="prchf(1)">Auto-Materialiser 1e+3₽</button></p>
       <p><a id="t3f">0</a> <button type="button" onClick="prchf(2)">AM Factory 1e+6₽</button></p>
+      <p><a id="t4f">0</a> <button type="button" onClick="prchf(3)">Automatic Factory Builder 1e+9₽</button></p>
     </div>
     <div id="gs2">
       <h3>Particles</h3>
