@@ -43,6 +43,7 @@
       }
       var t1f = 1;
       var t2f = 0;
+      var t3f = 0;
       function prchf(x){
         if (x === 0){
           if (part >= 10){
@@ -58,14 +59,26 @@
             document.getElementById("t2f").innerHTML= t2f;
           }
         }
+        if (x === 2){
+          if (part >= 10000000){
+            part -= 10000000;
+            t3f += 1;
+            document.getElementById("t3f").innerHTML= t3f;
+          }
+        }
       }
       function mf1(x){
         t1f += x;
         document.getElementById("t1f").innerHTML= t1f;
       }
+      function mf2(x){
+        t2f += x;
+        document.getElementById("t2f").innerHTML= t2f;
+      }
       setInterval(function(){incr(0.05*t1f);},50);
       setInterval(function(){upd();},50);
       setInterval(function(){mf1(t2f);},1000);
+      setInterval(function(){mf2(t3f);},1000);
     </script>
   </head>
   <body>
@@ -94,6 +107,7 @@
       <h3>Fluctuators</h3>
       <p><a id="t1f">1</a> <button type="button" onClick="prchf(0)">Quantum Field Interaction Device 10₽</button></p>
       <p><a id="t2f">0</a> <button type="button" onClick="prchf(1)">Auto-Materialiser 1e+3₽</button></p>
+      <p><a id="t3f">0</a> <button type="button" onClick="prchf(2)">AM Factory 1e+7₽</button></p>
     </div>
     <div id="gs2">
       <h3>Particles</h3>
