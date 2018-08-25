@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <title>Quantum Flux</title>
     <script>
-      var part = 10000000000000;
+      var part = 1000000;
       var partdisp = 0;
-      var tot = 10000000000000;
-      var totdisp = 0;
+      var tot = 1000000;
+      var totdisp = 1000000;
       function incr(x){
         part += x;
         tot += x;
@@ -17,7 +18,7 @@
         }
         document.getElementById("partdisp").innerHTML = partdisp;
         if (tot >= 1000){
-          totdisp = tot.toExponential(2);
+          totdisp = tot.toExponential(2)<
         } else {
           totdisp = tot.toFixed(0);
         }
@@ -108,47 +109,46 @@
     </script>
   </head>
   <body>
-    <div id="all">
-      <header>
-        <h2>Quantum Flux</h2>
-        <p><a id="partdisp">0</a>₽</p>
-        <p><a id="totdisp">0</a>₽ made in total</p>
-      </header>
-      <hr>
-      <nav>
-        <button type="button" onClick="cgs(0)">Story</button>
-        <button type="button" onClick="cgs(1)">Fluctuators</button>
-        <button type="button" onClick="cgs(2)">Particles</button>
-      </nav>
-      <hr>
-      <div id="gs0">
-        <h3>Story</h3>
-        <div id="s1">
-          <p>You got a small contained black hole for your birthday. Just what you always wanted. <br>
-             You go out and buy a quantum field interaction device and you start making virtual electron positron pairs next to the black hole. <br>
-             Every now and then the black hole will excite a pair of virtual particles into reality, and consume the positron. <br>
-             You are now left with one more electron than you started with, and using a small vaccum chamber, you are keeping it safe. <br>
-             When you get enough particles, you can get more qfids, and make even more particles! </p>
-        </div>
-        <div id="s2">
-          <p>You've made a thousand particles, but it must get annoying turning them into qfids. <br>
-             Hey, I've got an idea. Use your particles to make something to make qfids for you! <br>
-             I'm a genius, I'm gonna go study things beyond the Standard Model of Particle Physics. </p>
-        </div>
-        <div id="s3">
-          <p>A million particles now, your parents must be proud of your progress, but let me tell you a secret. <br>
-             What if you could use these particles on a factory to make qfid makers. Think of the cubic growth! <br>
-             Seeing as I'm so smart, I'm gonna go discover new things beyond the SMOPP... </p>
-        </div>
-        <div id="gs1">
-          <h3>Fluctuators</h3>
-          <p><a id="t1f">1</a> <button type="button" onClick="prchf(0)">Quantum Field Interaction Device 10₽</button></p>
-          <p><a id="t2f">0</a> <button type="button" onClick="prchf(1)">Auto-Materialiser 1e+3₽</button></p>
-          <p><a id="t3f">0</a> <button type="button" onClick="prchf(2)">AM Factory 1e+6₽</button></p>
-        </div>
-        <div id="gs2">
-          <h3>Particles</h3>
-        </div>
+    <header>
+      <h2>Quantum Flux</h2>
+      <p><a id="partdisp">0</a>₽</p>
+      <p><a id="totdisp">0</a>₽ have been made</p>
+    </header>
+    <hr>
+    <nav>
+      <button type="button" onClick="cgs(0)">Story</button>
+      <button type="button" onClick="cgs(1)">Fluctuators</button>
+      <button type="button" onClick="cgs(2)">Particles</button>
+    </nav>
+    <hr>
+    <div id="gs0">
+      <h3>Story</h3>
+      <div id="s1">
+        <p>You got a small contained black hole for your birthday. Just what you always wanted. <br>
+           You go out and buy a quantum field interaction device and you start making virtual electron positron pairs next to the black hole. <br>
+           Every now and then the black hole will excite a pair of virtual particles into reality, and consume the positron. <br>
+           You are now left with one more electron than you started with, and using a small vaccum chamber, you are keeping it safe. <br>
+           When you get enough particles, you can get more qfids, and make even more particles! </p>
+      </div>
+      <div id="s2">
+        <p>You've made a thousand particles, but it must get annoying turning them into qfids. <br>
+           Hey, I've got an idea. Use your particles to make something to make qfids for you! <br>
+           I'm a genius, I'm gonna go study things beyond the Standard Model of Particle Physics. </p>
+      </div>
+      <div id="s3">
+        <p>A million particles now, your parents mus be proud of your progress, but let me tell you a secret. <br>
+           What if you could use these particles on a factory to make qfid makers. Think of the cubic growth! <br>
+           Seeing as I'm so smart, I'm gonna go discover new things beyond the SMOPP... </p>
+      </div>
+    </div>
+    <div id="gs1">
+      <h3>Fluctuators</h3>
+      <p><a id="t1f">1</a> <button type="button" onClick="prchf(0)">Quantum Field Interaction Device 10₽</button></p>
+      <p><a id="t2f">0</a> <button type="button" onClick="prchf(1)">Auto-Materialiser 1e+3₽</button></p>
+      <p><a id="t3f">0</a> <button type="button" onClick="prchf(2)">AM Factory 1e+6₽</button></p>
+    </div>
+    <div id="gs2">
+      <h3>Particles</h3>
     </div>
   </body>
 </html>
