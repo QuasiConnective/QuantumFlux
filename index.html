@@ -152,11 +152,31 @@
         t3f += x;
         document.getElementById("t3f").innerHTML= t3f;
       }
+      function mf4(x){
+        t4f += x;
+        document.getElementById("t4f").innerHTML= t4f;
+      }
+      function mf5(x){
+        t5f += x;
+        document.getElementById("t5f").innerHTML= t5f;
+      }
+      function mf6(x){
+        t6f += x;
+        document.getElementById("t6f").innerHTML= t6f;
+      }
+      function mf7(x){
+        t7f += x;
+        document.getElementById("t7f").innerHTML= t7f;
+      }
       setInterval(function(){incr(0.05*t1f);},50);
       setInterval(function(){upd();},50);
       setInterval(function(){mf1(t2f);},1000);
       setInterval(function(){mf2(t3f);},1000);
       setInterval(function(){mf3(t4f);},1000);
+      setInterval(function(){mf4(t5f);},1000);
+      setInterval(function(){mf5(t6f);},1000);
+      setInterval(function(){mf6(t7f);},1000);
+      setInterval(function(){mf7(t8f);},1000);
       setInterval(function(){upd2();},50);
     </script>
   </head>
