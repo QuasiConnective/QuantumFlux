@@ -65,7 +65,14 @@
       }
       setInterval(function(){incr(0.05*t1f);},50);
       setInterval(function(){upd();},50);
-      setInterval(function(){mf1(t2f);},1000);
+      if (t2f >= 1000){
+        setInterval(function(){mf1(t2f);},1000);
+      }
+      if (t2f <= 1000){
+        if (t2f >=1 0){
+          setInterval(function(){mf1(1);},1000/t2f);
+        }
+      }
     </script>
   </head>
   <body>
