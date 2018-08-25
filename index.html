@@ -3,7 +3,7 @@
   <head>
     <title>Quantum Flux</title>
     <script>
-      var part = 1000000000;
+      var part = 950;
       var partdisp = 0;
       function incr(x){
         part += x;
@@ -43,6 +43,11 @@
       }
       function upd2(){
         if (part >= 1000){
+          var a = document.getElementById("s2");
+          a.style.display ="block"
+        } else{
+          var a = document.getElementById("s2");
+          a.style.display ="none"
         }
       }
       var t1f = 1;
