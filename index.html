@@ -37,7 +37,7 @@
       }
     </style>
     <script>
-      var part = 10000000000000000000000;
+      var part = 1000000000000;
       var partdisp = 0;
       var tot = 10000000000000000000000;
       var totdisp = 0;
@@ -228,6 +228,8 @@
           if (x >= 1000000000000){
             part -= 1000000000000;
             multiplier += 6;
+            var a = document.getElementById("b1");
+            a.style.display ="none"
           }
         }
       }
@@ -312,7 +314,7 @@
     </div>
     <div id="gs2">
       <h3>Boosts</h3>
-      <button type="button" onClick="pb(0)">Quarks (x6) 1e+12₽</button>
+      <button type="button" onClick="pb(0)" id="b1">Quarks (x6) 1e+12₽</button>
     </div>
     <div id="gs3">
       <h3>Black Hole</h3>
