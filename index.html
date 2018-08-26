@@ -188,6 +188,11 @@
         t7f += x;
         document.getElementById("t7f").innerHTML= t7f;
       }
+      var time = 0;
+      function t(x){
+        time += x;
+        document.getElementById("time").innerHTML=time;
+      }
       setInterval(function(){incr(0.05*t1f);},50);
       setInterval(function(){upd();},50);
       setInterval(function(){mf1(t2f);},1000);
@@ -198,6 +203,7 @@
       setInterval(function(){mf6(t7f);},1000);
       setInterval(function(){mf7(t8f);},1000);
       setInterval(function(){upd2();},50);
+      setInterval(function(){t(0.02);},50);
     </script>
   </head>
   <body>
@@ -205,6 +211,7 @@
       <h2>Quantum Flux</h2>
       <p><a id="partdisp">0</a>₽</p>
       <p><a id="totdisp">0</a>₽ have been made</p>
+      <p>Time Elapsed: <a id="time">0</a></p>
     </header>
     <hr>
     <nav>
