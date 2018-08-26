@@ -222,12 +222,21 @@
         t7f += x;
         document.getElementById("t7f").innerHTML= t7f;
       }
+      var multiplier = 1;
+      function pb(x){
+        if (x === 0){
+          if (x >= 1000000000000){
+            part -= 1000000000000;
+            multiplier += 6;
+          }
+        }
+      }
       var time = 0;
       function t(x){
         time += x;
         document.getElementById("time").innerHTML=time.toFixed(2);
       }
-      setInterval(function(){incr(0.05*t1f);},50);
+      setInterval(function(){incr(0.05*t1f*multiplier);},50);
       setInterval(function(){upd();},50);
       setInterval(function(){mf1(t2f);},1000);
       setInterval(function(){mf2(t3f);},1000);
@@ -303,6 +312,7 @@
     </div>
     <div id="gs2">
       <h3>Boosts</h3>
+      <button type="button" onClick="pb(0)">Quarks (x6) 1e+12₽</button>
     </div>
     <div id="gs3">
       <h3>Black Hole</h3>
