@@ -191,7 +191,7 @@
       var time = 0;
       function t(x){
         time += x;
-        document.getElementById("time").innerHTML=time;
+        document.getElementById("time").innerHTML=time.toFixed(2);
       }
       setInterval(function(){incr(0.05*t1f);},50);
       setInterval(function(){upd();},50);
