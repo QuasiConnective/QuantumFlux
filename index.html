@@ -353,15 +353,15 @@
         bmult = 1 + 1 / (bhmass / 1000000000);
         document.getElementById("bmult").innerHTML=bmult;
       }
-      setInterval(function(){incr(0.05*t1f*mult);},50);
+      setInterval(function(){incr(0.05*t1f*mult*bmult);},50);
       setInterval(function(){upd();},50);
-      setInterval(function(){mf1(t2f*mult*bmult);},1000);
-      setInterval(function(){mf2(t3f*mult*bmult);},1000);
-      setInterval(function(){mf3(t4f*mult*bmult);},1000);
-      setInterval(function(){mf4(t5f*mult*bmult);},1000);
-      setInterval(function(){mf5(t6f*mult*bmult);},1000);
-      setInterval(function(){mf6(t7f*mult*bmult);},1000);
-      setInterval(function(){mf7(t8f*mult*bmult);},1000);
+      setInterval(function(){mf1(t2f*mult);},1000);
+      setInterval(function(){mf2(t3f*mult);},1000);
+      setInterval(function(){mf3(t4f*mult);},1000);
+      setInterval(function(){mf4(t5f*mult);},1000);
+      setInterval(function(){mf5(t6f*mult);},1000);
+      setInterval(function(){mf6(t7f*mult);},1000);
+      setInterval(function(){mf7(t8f*mult);},1000);
       setInterval(function(){upd2();},50);
       setInterval(function(){bh();},50);
       setInterval(function(){t(0.05);},50);
