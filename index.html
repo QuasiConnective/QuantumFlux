@@ -136,91 +136,174 @@
       var t6f = 0;
       var t7f = 0;
       var t8f = 0;
+      var t1fdisp = 1;
+      var t2fdisp = 0;
+      var t3fdisp = 0;
+      var t4fdisp = 0;
+      var t5fdisp = 0;
+      var t6fdisp = 0;
+      var t7fdisp = 0;
+      var t8fdisp = 0;
       function prchf(x){
         if (x === 0){
           if (part >= 10){
             part -= 10;
             t1f += 1;
-            document.getElementById("t1f").innerHTML= t1f;
+            if (t1f <= 1000){
+              t1fdisp = t1f;
+            } else{
+              t1fdisp = t1f.toExponential(2)
+            }
+            document.getElementById("t1fdisp").innerHTML= t1fdisp;
           }
         }
         if (x === 1){
           if (part >= 1000){
             part -= 1000;
             t2f += 1;
-            document.getElementById("t2f").innerHTML= t2f;
+            if (t2f <= 1000){
+              t2fdisp = t2f;
+            } else{
+              t2fdisp = t2f.toExponential(2)
+            }
+            document.getElementById("t2fdisp").innerHTML= t2fdisp;
           }
         }
         if (x === 2){
           if (part >= 1000000){
             part -= 1000000;
             t3f += 1;
-            document.getElementById("t3f").innerHTML= t3f;
+            if (t3f <= 1000){
+              t3fdisp = t3f;
+            } else{
+              t3fdisp = t3f.toExponential(2)
+            }
+            document.getElementById("t3fdisp").innerHTML= t3fdisp;
           }
         }
         if (x === 3){
           if (part >= 1000000000){
             part -= 1000000000;
             t4f += 1;
-            document.getElementById("t4f").innerHTML= t4f;
+            if (t4f <= 1000){
+              t4fdisp = t4f;
+            } else{
+              t4fdisp =t4f.toExponential(2)
+            }
+            document.getElementById("t4fdisp").innerHTML= t4fdisp;
           }
         }
         if (x === 4){
           if (part >= 1000000000000){
             part -= 1000000000000;
             t5f += 1;
-            document.getElementById("t5f").innerHTML= t5f;
+            if (t5f <= 1000){
+              t5fdisp = t5f;
+            } else{
+              t5fdisp = t5f.toExponential(2)
+            }
+            document.getElementById("t5fdisp").innerHTML= t5fdisp;
           }
         }
         if (x === 5){
           if (part >= 100000000000000){
             part -= 100000000000000;
             t6f += 1;
-            document.getElementById("t6f").innerHTML= t6f;
+            if (t1f <= 1000){
+              t6fdisp = t6f;
+            } else{
+              t6fdisp = t6f.toExponential(2)
+            }
+            document.getElementById("t6fdisp").innerHTML= t6fdisp;
           }
         }
         if (x === 6){
           if (part >= 10000000000000000){
             part -= 10000000000000000;
             t7f += 1;
-            document.getElementById("t7f").innerHTML= t7f;
+            if (t7f <= 1000){
+              t7fdisp = t7f;
+            } else{
+              t7fdisp = t7f.toExponential(2)
+            }
+            document.getElementById("t7fdisp").innerHTML= t7fdisp;
           }
         }
         if (x === 7){
           if (part >= 1000000000000000000){
             part -= 1000000000000000000;
             t8f += 1;
-            document.getElementById("t8f").innerHTML= t8f;
+            if (t8f <= 1000){
+              t8fdisp = t8f;
+            } else{
+              t8fdisp = t8f.toExponential(2)
+            }
+            document.getElementById("t8fdisp").innerHTML= t8fdisp;
           }
         }
       }
       function mf1(x){
         t1f += x;
-        document.getElementById("t1f").innerHTML= t1f;
+        if (t1f <= 1000){
+            t1fdisp = t1f;
+          } else{
+            t1fdisp = t1f.toExponential(2)
+          }
+        document.getElementById("t1fdisp").innerHTML= t1fdisp;
       }
       function mf2(x){
         t2f += x;
-        document.getElementById("t2f").innerHTML= t2f;
+        if (t2f <= 1000){
+            t2fdisp = t2f;
+          } else{
+            t2fdisp = t2f.toExponential(2)
+          }
+        document.getElementById("t2fdisp").innerHTML= t2fdisp;
       }
       function mf3(x){
         t3f += x;
-        document.getElementById("t3f").innerHTML= t3f;
+        if (t3f <= 1000){
+            t3fdisp = t3f;
+          } else{
+            t3fdisp = t3f.toExponential(2)
+          }
+        document.getElementById("t3fdisp").innerHTML= t3fdisp;
       }
       function mf4(x){
         t4f += x;
-        document.getElementById("t4f").innerHTML= t4f;
+        if (t4f <= 1000){
+            t3fdisp = t3f;
+          } else{
+            t3fdisp = t3f.toExponential(2)
+          }
+        document.getElementById("t4fdisp").innerHTML= t4fdisp;
       }
       function mf5(x){
         t5f += x;
-        document.getElementById("t5f").innerHTML= t5f;
+        if (t5f <= 1000){
+            t4fdisp = t5f;
+          } else{
+            t5fdisp = t5f.toExponential(2)
+          }
+        document.getElementById("t5fdisp").innerHTML= t5fdisp;
       }
       function mf6(x){
         t6f += x;
-        document.getElementById("t6f").innerHTML= t6f;
+        if (t6f <= 1000){
+            t6fdisp = t6f;
+          } else{
+            t6fdisp = t6f.toExponential(2)
+          }
+        document.getElementById("t6fdisp").innerHTML= t6fdisp;
       }
       function mf7(x){
         t7f += x;
-        document.getElementById("t7f").innerHTML= t7f;
+        if (t7f <= 1000){
+            t7fdisp = t7f;
+          } else{
+            t7fdisp = t7f.toExponential(2)
+          }
+        document.getElementById("t7fdisp").innerHTML= t7fdisp;
       }
       var time = 0;
       function t(x){
