@@ -227,15 +227,24 @@
         time += x;
         document.getElementById("time").innerHTML=time.toFixed(2);
       }
-      setInterval(function(){incr(0.05*t1f);},50);
+      var mult = 1;
+      function prchb(x){
+        if (x === 0){
+          if (part >= 1000){
+            var a = document.getElementById("b1");
+            a.style.display ="none"
+          }
+        }
+      }
+      setInterval(function(){incr(0.05*t1f*mult);},50);
       setInterval(function(){upd();},50);
-      setInterval(function(){mf1(t2f);},1000);
-      setInterval(function(){mf2(t3f);},1000);
-      setInterval(function(){mf3(t4f);},1000);
-      setInterval(function(){mf4(t5f);},1000);
-      setInterval(function(){mf5(t6f);},1000);
-      setInterval(function(){mf6(t7f);},1000);
-      setInterval(function(){mf7(t8f);},1000);
+      setInterval(function(){mf1(t2f*mult);},1000);
+      setInterval(function(){mf2(t3f*mult);},1000);
+      setInterval(function(){mf3(t4f*mult);},1000);
+      setInterval(function(){mf4(t5f*mult);},1000);
+      setInterval(function(){mf5(t6f*mult);},1000);
+      setInterval(function(){mf6(t7f*mult);},1000);
+      setInterval(function(){mf7(t8f*mult);},1000);
       setInterval(function(){upd2();},50);
       setInterval(function(){t(0.05);},50);
     </script>
@@ -267,14 +276,14 @@
       <div id="s2">
         <p>You've made a thousand particles, but it must get annoying turning them into qfids. <br>
            Hey, I've got an idea. Use your particles to make something to make qfids for you! <br>
-           I'm a genius, I'm gonna go study things beyond the Standard Model of Particle Physics... </p>
+           I'm a genius, I'm gonna go study things beyond the Standard Model of Particle Physics...
+           Oh, yes. Boosts let you make more types of particles, greatly incresing production. <br>
+           Why don't you go buy one...</p>
       </div>
       <div id="s3">
         <p>A million particles now, your parents mus be proud of your progress, but let me tell you a secret. <br>
            What if you could use these particles on a factory to make qfid makers. Think of the cubic growth! <br>
-           Seeing as I'm so smart, I'm gonna go discover new things beyond the SMOPP... <br>
-           Oh, yes. Boosts let you make more types of particles, greatly incresing production. <br>
-           Why don't you go buy one...</p>
+           Seeing as I'm so smart, I'm gonna go discover new things beyond the SMOPP... <br></p>
       </div>
       <div id="s4">
         <p>I have had another stroke of genius, you know those factories, what if you had an auto factory builder!<br>
@@ -303,6 +312,7 @@
     </div>
     <div id="gs2">
       <h3>Boosts</h3>
+      <button type="button" onClick="prchb(0)" id="b1">Quarks 1e+3₽</button>
     </div>
     <div id="gs3">
       <h3>Black Hole</h3>
