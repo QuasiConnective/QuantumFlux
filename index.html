@@ -340,15 +340,28 @@
           }
         }
       }
+      bhmass = 1000000000000000000;
+      bhdisp
+      function bh(){
+        bhmass = 1000000000000000000 - tot;
+        if (bhmass >= 1000){
+          bhdisp = bhmass.toExponential(2)
+        } else{
+          bhdisp = math.Round(bhmass)
+        }
+        document.getElementById("bhdisp").innerHTML=bhdisp;
+        bmult = 1 + 1 / (bhmass / 1000000000);
+        document.getElementById("bmult").innerHTML=bmult;
+      }
       setInterval(function(){incr(0.05*t1f*mult);},50);
       setInterval(function(){upd();},50);
-      setInterval(function(){mf1(t2f*mult);},1000);
-      setInterval(function(){mf2(t3f*mult);},1000);
-      setInterval(function(){mf3(t4f*mult);},1000);
-      setInterval(function(){mf4(t5f*mult);},1000);
-      setInterval(function(){mf5(t6f*mult);},1000);
-      setInterval(function(){mf6(t7f*mult);},1000);
-      setInterval(function(){mf7(t8f*mult);},1000);
+      setInterval(function(){mf1(t2f*mult*bmult);},1000);
+      setInterval(function(){mf2(t3f*mult*bmult);},1000);
+      setInterval(function(){mf3(t4f*mult*bmult);},1000);
+      setInterval(function(){mf4(t5f*mult*bmult);},1000);
+      setInterval(function(){mf5(t6f*mult*bmult);},1000);
+      setInterval(function(){mf6(t7f*mult*bmult);},1000);
+      setInterval(function(){mf7(t8f*mult*bmult);},1000);
       setInterval(function(){upd2();},50);
       setInterval(function(){t(0.05);},50);
     </script>
@@ -423,6 +436,8 @@
     </div>
     <div id="gs3">
       <h3>Black Hole</h3>
+      <h6>Remaining Mass: <a id="bhdisp">0</a></h6>
+      <p>Multiplier: <a id="bmult">0</a></p>
     </div>
   </body>
 </html>
