@@ -345,9 +345,9 @@
       function bh(){
         bhmass = 1000000000000000000000000 - tot;
         if (bhmass >= 1000){
-          bhdisp = bhmass.toExponential(2)
+          bhdisp = bhmass.toExponential(2);
         } else{
-          bhdisp = math.Round(bhmass)
+          bhdisp = math.Round(bhmass);
         }
         document.getElementById("bhdisp").innerHTML=bhdisp;
         bmult = 1 + bmass / 1000000000000;
