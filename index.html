@@ -376,78 +376,80 @@
     </script>
   </head>
   <body>
-    <header>
-      <h2>Quantum Flux</h2>
-      <p><a id="partdisp">0</a>₽</p>
-      <p><a id="totdisp">0</a>₽ have been made</p>
-      <p>Time Elapsed: <a id="time">0</a></p>
-    </header>
-    <hr>
-    <nav>
-      <button class="button" type="button" onClick="cgs(0)">Story</button>
-      <button class="button" type="button" onClick="cgs(1)">Production</button>
-      <button class="button" type="button" onClick="cgs(2)">Boosts</button>
-      <button class="button1" type="button" onClick="cgs(3)">Black Hole</button>
-    </nav>
-    <hr>
-    <div id="gs0">
-      <h3>Story</h3>
-      <div id="s1">
-        <p>You got a small contained black hole for your birthday. Just what you always wanted. <br>
-           You go out and buy a quantum field interaction device and you start making virtual electron positron pairs next to the black hole. <br>
-           Every now and then the black hole will excite a pair of virtual particles into reality, and consume the positron. <br>
-           You are now left with one more electron than you started with, and using a small vaccum chamber, you are keeping it safe. <br>
-           When you get enough particles, you can get more qfids, and make even more particles! </p>
+    <div id="main">
+      <header>
+        <h2>Quantum Flux</h2>
+        <p><a id="partdisp">0</a>₽</p>
+        <p><a id="totdisp">0</a>₽ have been made</p>
+        <p>Time Elapsed: <a id="time">0</a></p>
+      </header>
+      <hr>
+      <nav>
+        <button class="button" type="button" onClick="cgs(0)">Story</button>
+        <button class="button" type="button" onClick="cgs(1)">Production</button>
+        <button class="button" type="button" onClick="cgs(2)">Boosts</button>
+        <button class="button1" type="button" onClick="cgs(3)">Black Hole</button>
+      </nav>
+      <hr>
+      <div id="gs0">
+        <h3>Story</h3>
+        <div id="s1">
+          <p>You got a small contained black hole for your birthday. Just what you always wanted. <br>
+             You go out and buy a quantum field interaction device and you start making virtual electron positron pairs next to the black hole. <br>
+             Every now and then the black hole will excite a pair of virtual particles into reality, and consume the positron. <br>
+             You are now left with one more electron than you started with, and using a small vaccum chamber, you are keeping it safe. <br>
+             When you get enough particles, you can get more qfids, and make even more particles! </p>
+        </div>
+        <div id="s2">
+          <p>You've made a thousand particles, but it must get annoying turning them into qfids. <br>
+             Hey, I've got an idea. Use your particles to make something to make qfids for you! <br>
+             I'm a genius, I'm gonna go study things beyond the Standard Model of Particle Physics...
+             Oh, yes. Boosts let you make more types of particles, greatly incresing production. <br>
+             Why don't you go buy one...</p>
+        </div>
+        <div id="s3">
+          <p>A million particles now, your parents mus be proud of your progress, but let me tell you a secret. <br>
+             What if you could use these particles on a factory to make qfid makers. Think of the cubic growth! <br>
+             Seeing as I'm so smart, I'm gonna go discover new things beyond the SMOPP... <br></p>
+        </div>
+        <div id="s4">
+          <p>I have had another stroke of genius, you know those factories, what if you had an auto factory builder!<br>
+             Oh, yeah; congrats on a billion particles or whatever, I'm gonna go study string theory... </p>
+        </div>
+        <div id="s5">
+          <p>Why build factories yourself when you could program robots to do it for you.<br>
+             You've made a trillion particles, thats like enough to make a pin in real life,<br>
+             surely you can make some robots... </p>
+        </div>
+        <div id="s6">
+          <p>Ok, wait till you hear this.<br>
+             Robots, that program robots. This is revolutionary, I'm gonna become the most famous developer of code ever!</p>
+        </div>
       </div>
-      <div id="s2">
-        <p>You've made a thousand particles, but it must get annoying turning them into qfids. <br>
-           Hey, I've got an idea. Use your particles to make something to make qfids for you! <br>
-           I'm a genius, I'm gonna go study things beyond the Standard Model of Particle Physics...
-           Oh, yes. Boosts let you make more types of particles, greatly incresing production. <br>
-           Why don't you go buy one...</p>
+      <div id="gs1">
+        <h3>Fluctuators</h3>
+        <p><a id="t1fdisp">1</a> <button type="button" onClick="prchf(0)">Quantum Field Interaction Device 10₽</button></p>
+        <p><a id="t2fdisp">0</a> <button type="button" onClick="prchf(1)">Auto-Materialiser 1e+3₽</button></p>
+        <p><a id="t3fdisp">0</a> <button type="button" onClick="prchf(2)">AM Factory 1e+6₽</button></p>
+        <p><a id="t4fdisp">0</a> <button type="button" onClick="prchf(3)">Robotic Factory Builder 1e+9₽</button></p>
+        <p><a id="t5fdisp">0</a> <button type="button" onClick="prchf(4)">AI for Programming AI 1e+12₽</button></p>
+        <p><a id="t6fdisp">0</a> <button type="button" onClick="prchf(5)">AI Assembly Chain 1e+18₽</button></p>
+        <p><a id="t7fdisp">0</a> <button type="button" onClick="prchf(6)">Sentient Drones 1e+24₽</button></p>
+        <p><a id="t8fdisp">0</a> <button type="button" onClick="prchf(7)">Sentient Probes 1e+30₽</button></p>
       </div>
-      <div id="s3">
-        <p>A million particles now, your parents mus be proud of your progress, but let me tell you a secret. <br>
-           What if you could use these particles on a factory to make qfid makers. Think of the cubic growth! <br>
-           Seeing as I'm so smart, I'm gonna go discover new things beyond the SMOPP... <br></p>
+      <div id="gs2">
+        <h3>Boosts</h3>
+        <p>Current Multiplier: <a id="mult">1</a></p>
+        <button type="button" onClick="prchb(0)" id="b1">Quarks 1e+3₽</button>
+        <button type="button" onClick="prchb(1)" id="b2">Leptons 1e+6₽</button>
+        <button type="button" onClick="prchb(2)" id="b3">Fundamental Bosons 1e+9₽</button>
+        <button type="button" onClick="prchb(3)" id="b4">Antimatter 1e+12₽</button>
       </div>
-      <div id="s4">
-        <p>I have had another stroke of genius, you know those factories, what if you had an auto factory builder!<br>
-           Oh, yeah; congrats on a billion particles or whatever, I'm gonna go study string theory... </p>
+      <div id="gs3">
+        <h3>Black Hole</h3>
+        <p>Remaining Mass: <a id="bhmass">0</a></p>
+        <p>Multiplier: <a id="bmult">0</a></p>
       </div>
-      <div id="s5">
-        <p>Why build factories yourself when you could program robots to do it for you.<br>
-           You've made a trillion particles, thats like enough to make a pin in real life,<br>
-           surely you can make some robots... </p>
-      </div>
-      <div id="s6">
-        <p>Ok, wait till you hear this.<br>
-           Robots, that program robots. This is revolutionary, I'm gonna become the most famous developer of code ever!</p>
-      </div>
-    </div>
-    <div id="gs1">
-      <h3>Fluctuators</h3>
-      <p><a id="t1fdisp">1</a> <button type="button" onClick="prchf(0)">Quantum Field Interaction Device 10₽</button></p>
-      <p><a id="t2fdisp">0</a> <button type="button" onClick="prchf(1)">Auto-Materialiser 1e+3₽</button></p>
-      <p><a id="t3fdisp">0</a> <button type="button" onClick="prchf(2)">AM Factory 1e+6₽</button></p>
-      <p><a id="t4fdisp">0</a> <button type="button" onClick="prchf(3)">Robotic Factory Builder 1e+9₽</button></p>
-      <p><a id="t5fdisp">0</a> <button type="button" onClick="prchf(4)">AI for Programming AI 1e+12₽</button></p>
-      <p><a id="t6fdisp">0</a> <button type="button" onClick="prchf(5)">AI Assembly Chain 1e+18₽</button></p>
-      <p><a id="t7fdisp">0</a> <button type="button" onClick="prchf(6)">Sentient Drones 1e+24₽</button></p>
-      <p><a id="t8fdisp">0</a> <button type="button" onClick="prchf(7)">Sentient Probes 1e+30₽</button></p>
-    </div>
-    <div id="gs2">
-      <h3>Boosts</h3>
-      <p>Current Multiplier: <a id="mult">1</a></p>
-      <button type="button" onClick="prchb(0)" id="b1">Quarks 1e+3₽</button>
-      <button type="button" onClick="prchb(1)" id="b2">Leptons 1e+6₽</button>
-      <button type="button" onClick="prchb(2)" id="b3">Fundamental Bosons 1e+9₽</button>
-      <button type="button" onClick="prchb(3)" id="b4">Antimatter 1e+12₽</button>
-    </div>
-    <div id="gs3">
-      <h3>Black Hole</h3>
-      <p>Remaining Mass: <a id="bhmass">0</a></p>
-      <p>Multiplier: <a id="bmult">0</a></p>
     </div>
   </body>
 </html>
