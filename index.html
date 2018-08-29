@@ -361,6 +361,15 @@
         }
         document.getElementById("bmult").innerHTML=bmult;
       }
+      function bhtest(){
+        if (bhmass <= 0){
+          var a = document.getElementById("main");
+            a.style.display ="none"
+        } else {
+          var a = document.getElementById("main");
+            a.style.display ="block"
+        }
+      }
       setInterval(function(){incr(0.05*t1f*mult*bmult);},50);
       setInterval(function(){upd();},50);
       setInterval(function(){mf1(t2f*mult);},1000);
@@ -372,6 +381,7 @@
       setInterval(function(){mf7(t8f*mult);},1000);
       setInterval(function(){upd2();},50);
       setInterval(function(){bh();},50);
+      setInterval(function(){bhtest();},50);
       setInterval(function(){t(0.05);},50);
     </script>
   </head>
