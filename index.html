@@ -35,6 +35,9 @@
         border-radius: 4px;
         color: #FFFFFF;
       }
+      .buttonr {
+        padding:32px 32px;
+      }
     </style>
     <script>
       var part = 1000000000000000000;
@@ -370,6 +373,8 @@
             a.style.display ="block"
         }
       }
+      function reset(){
+      }
       setInterval(function(){incr(0.05*t1f*mult*bmult);},50);
       setInterval(function(){upd();},50);
       setInterval(function(){mf1(t2f*mult);},1000);
@@ -386,6 +391,7 @@
     </script>
   </head>
   <body>
+    <button id="bhr" class="buttonr" type="button" onClick="reset()">Get a new Black Hole</button>
     <div id="main">
       <header>
         <h2>Quantum Flux</h2>
