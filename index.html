@@ -206,8 +206,8 @@
           }
         }
         if (x === 5){
-          if (part >= 100000000000000){
-            part -= 100000000000000;
+          if (part >= 1000000000000000000){
+            part -= 1000000000000000000;
             t6f += 1;
             if (t6f <= 1000){
               t6fdisp = t6f;
@@ -218,8 +218,8 @@
           }
         }
         if (x === 6){
-          if (part >= 10000000000000000){
-            part -= 10000000000000000;
+          if (part >= 1000000000000000000000000){
+            part -= 1000000000000000000000000;
             t7f += 1;
             if (t7f <= 1000){
               t7fdisp = t7f;
@@ -230,8 +230,8 @@
           }
         }
         if (x === 7){
-          if (part >= 1000000000000000000){
-            part -= 1000000000000000000;
+          if (part >= 1000000000000000000000000000000){
+            part -= 1000000000000000000000000000000;
             t8f += 1;
             if (t8f <= 1000){
               t8fdisp = t8f;
@@ -350,7 +350,7 @@
           bhdisp = math.Round(bhmass)
         }
         document.getElementById("bhdisp").innerHTML=bhdisp;
-        bmult = 1 + 1 / (bhmass / 1000000000000);
+        bmult = 1 + bmass / 1000000000000;
         document.getElementById("bmult").innerHTML=bmult;
       }
       setInterval(function(){incr(0.05*t1f*mult*bmult);},50);
@@ -424,9 +424,9 @@
       <p><a id="t3fdisp">0</a> <button type="button" onClick="prchf(2)">AM Factory 1e+6₽</button></p>
       <p><a id="t4fdisp">0</a> <button type="button" onClick="prchf(3)">Robotic Factory Builder 1e+9₽</button></p>
       <p><a id="t5fdisp">0</a> <button type="button" onClick="prchf(4)">AI for Programming AI 1e+12₽</button></p>
-      <p><a id="t6fdisp">0</a> <button type="button" onClick="prchf(5)">AI Assembly Chain 1e+14₽</button></p>
-      <p><a id="t7fdisp">0</a> <button type="button" onClick="prchf(6)">Sentient Drones 1e+16₽</button></p>
-      <p><a id="t8fdisp">0</a> <button type="button" onClick="prchf(7)">Sentient Probes 1e+18₽</button></p>
+      <p><a id="t6fdisp">0</a> <button type="button" onClick="prchf(5)">AI Assembly Chain 1e+18₽</button></p>
+      <p><a id="t7fdisp">0</a> <button type="button" onClick="prchf(6)">Sentient Drones 1e+24₽</button></p>
+      <p><a id="t8fdisp">0</a> <button type="button" onClick="prchf(7)">Sentient Probes 1e+30₽</button></p>
     </div>
     <div id="gs2">
       <h3>Boosts</h3>
