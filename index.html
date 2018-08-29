@@ -37,9 +37,9 @@
       }
     </style>
     <script>
-      var part = 0;
+      var part = 1000000000;
       var partdisp = 0;
-      var tot = 0;
+      var tot = 1000000000;
       var totdisp = 0;
       function incr(x){
         part += x;
@@ -340,17 +340,17 @@
           }
         }
       }
-      bhmass = 1000000000000000000;
+      bhmass = 1000000000000000000000000;
       bhdisp = 0;
       function bh(){
-        bhmass = 1000000000000000000 - tot;
+        bhmass = 1000000000000000000000000 - tot;
         if (bhmass >= 1000){
           bhdisp = bhmass.toExponential(2)
         } else{
           bhdisp = math.Round(bhmass)
         }
         document.getElementById("bhdisp").innerHTML=bhdisp;
-        bmult = 1 + 1 / (bhmass / 1000000000);
+        bmult = 1 + 1 / (bhmass / 1000000000000);
         document.getElementById("bmult").innerHTML=bmult;
       }
       setInterval(function(){incr(0.05*t1f*mult*bmult);},50);
