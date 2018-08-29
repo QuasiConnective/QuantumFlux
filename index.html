@@ -353,7 +353,7 @@
       bmult = 1;
       function bh(){
         bhmass = 1000000000000000000000000 - tot;
-        bmult = 1 + bmass / 1000000000000;
+        bmult = 1 + tot / 1000000000;
         document.getElementById("bmult").innerHTML=bmult;
       }
       setInterval(function(){incr(0.05*t1f*mult*bmult);},50);
@@ -441,7 +441,7 @@
     </div>
     <div id="gs3">
       <h3>Black Hole</h3>
-      <p>Remaining Mass: <a id="bhdisp">0</a></p>
+      <p>Remaining Mass: <a id="bhmass">0</a></p>
       <p>Multiplier: <a id="bmult">0</a></p>
     </div>
   </body>
