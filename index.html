@@ -370,14 +370,32 @@
           a.style.display ="none"
           var b = document.getElementById("bhr");
           b.style.display ="block"
-        } else {
-          var a = document.getElementById("main");
-          a.style.display ="block"
-          var b = document.getElementById("bhr");
-          b.style.display ="none"
-        }
+        } 
       }
       function reset(){
+        part = 0;
+        tot = 0;
+        mult = 0;
+        t1f = 1;
+        t2f = 0;
+        t3f = 0;
+        t4f = 0;
+        t5f = 0;
+        t6f = 0;
+        t7f = 0;
+        t8f = 0;
+        t1fdisp = 1;
+        t2fdisp = 0;
+        t3fdisp = 0;
+        t4fdisp = 0;
+        t5fdisp = 0;
+        t6fdisp = 0;
+        t7fdisp = 0;
+        t8fdisp = 0;
+        var a = document.getElementById("main");
+        a.style.display ="block"
+        var b = document.getElementById("bhr");
+        b.style.display ="none"
       }
       setInterval(function(){incr(0.05*t1f*mult*bmult);},50);
       setInterval(function(){upd();},50);
