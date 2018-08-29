@@ -354,7 +354,7 @@
       function bh(){
         bhmass = 1000000000000000000000000 - tot;
         document.getElementById("bhmass").innerHTML=bhmass;
-        bmult = 1 + tot / 1000000000;
+        bmult = 1 + tot / 100000000000000000000000000;
         document.getElementById("bmult").innerHTML=bmult;
       }
       setInterval(function(){incr(0.05*t1f*mult*bmult);},50);
