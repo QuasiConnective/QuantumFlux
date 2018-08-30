@@ -354,7 +354,8 @@
       }
       bhmass = 1000000000000000000000000;
       bmult = 1;
-      max = 100;
+      max = 10;
+      nbhm = 10000000000000000000000000000;
       function bh(){
         bhmass = 1000000000000000000000000 - tot;
         document.getElementById("bhmass").innerHTML=bhmass;
@@ -401,8 +402,10 @@
         t8fdisp = 0;
         c = document.getElementByClassName("boost");
         c.style.display="block"
-        bhmass = 1000000000000000000000000;
+        bhmass = nbhm;
         bmult = 1;
+        nbhm *= 10000;
+        max *= 10;
         var a = document.getElementById("main");
         a.style.display="block"
         var b = document.getElementById("bhr");
