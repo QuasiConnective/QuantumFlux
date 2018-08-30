@@ -42,15 +42,21 @@
     <script>
       function save(){
         var save = {
-          part:part
+          part:part,
+          tot:tot,
+          mult:mult,
+          t1f:t1f,
+          t2f:t2f
         }
         localStorage.setItem("save",JSON.stringify(save));
       }
       function load(){
         var savegame = JSON.parse(localStorage.getItem("save"));
-        if (typeof savegame.part != "undefined") {
-          part = savegame.part;
-        }
+        if (typeof savegame.part != "undefined") part = savegame.part;
+        if (typeof savegame.tot != "undefined") tot = savegame.tot;
+        if (typeof savegame.mult != "undefined") mult = savegame.mult;
+        if (typeof savegame.t1f != "undefined") t1f = savegame.t1f;
+        if (typeof savegame.t2f != "undefined") t2f = savegame.part;
       }
       var part = 100000000000000000000;
       var partdisp = 0;
