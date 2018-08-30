@@ -399,8 +399,14 @@
         t6fdisp = 0;
         t7fdisp = 0;
         t8fdisp = 0;
-        var c = document.getElementsByClassName("boost");
+        var c = document.getElementByCId("b1");
         c.style.display="block"
+        var d = document.getElementByCId("b2");
+        d.style.display="block"
+        var e = document.getElementByCId("b3");
+        e.style.display="block"
+        var f = document.getElementByCId("b4");
+        f.style.display="block"
         bhmass *= 10000;
         bmult = 1;
         max *= 10;
@@ -490,10 +496,10 @@
       <div id="gs2">
         <h3>Boosts</h3>
         <p>Current Multiplier: <a id="mult">1</a></p>
-        <button type="button" onClick="prchb(0)" id="b1" class="boost">Quarks 1e+3₽</button>
-        <button type="button" onClick="prchb(1)" id="b2" class="boost">Leptons 1e+6₽</button>
-        <button type="button" onClick="prchb(2)" id="b3" class="boost">Fundamental Bosons 1e+9₽</button>
-        <button type="button" onClick="prchb(3)" id="b4" class="boost">Antimatter 1e+12₽</button>
+        <button type="button" onClick="prchb(0)" id="b1">Quarks 1e+3₽</button>
+        <button type="button" onClick="prchb(1)" id="b2">Leptons 1e+6₽</button>
+        <button type="button" onClick="prchb(2)" id="b3">Fundamental Bosons 1e+9₽</button>
+        <button type="button" onClick="prchb(3)" id="b4">Antimatter 1e+12₽</button>
       </div>
       <div id="gs3">
         <h3>Black Hole</h3>
