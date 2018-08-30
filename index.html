@@ -46,7 +46,17 @@
           tot:tot,
           mult:mult,
           t1f:t1f,
-          t2f:t2f
+          t2f:t2f,
+          t3f:t3f,
+          t4f:t4f,
+          t5f:t5f,
+          t6f:t7f,
+          t7f:t7f,
+          t8f:t8f,
+          bhmass:bhmass,
+          bhmax:bhmax,
+          bmult:bmult,
+          max:max
         }
         localStorage.setItem("save",JSON.stringify(save));
       }
@@ -57,6 +67,16 @@
         if (typeof savegame.mult != "undefined") mult = savegame.mult;
         if (typeof savegame.t1f != "undefined") t1f = savegame.t1f;
         if (typeof savegame.t2f != "undefined") t2f = savegame.t2f;
+        if (typeof savegame.t3f != "undefined") t3f = savegame.t3f;
+        if (typeof savegame.t4f != "undefined") t4f = savegame.t4f;
+        if (typeof savegame.t5f != "undefined") t5f = savegame.t5f;
+        if (typeof savegame.t6f != "undefined") t6f = savegame.t6f;
+        if (typeof savegame.t7f != "undefined") t7f = savegame.t7f;
+        if (typeof savegame.t8f != "undefined") t8f = savegame.t8f;
+        if (typeof savegame.bhmass != "undefined") bhmass = savegame.bhmass;
+        if (typeof savegame.bhmax != "undefined") bhmax = savegame.bhmax;
+        if (typeof savegame.bmult != "undefined") bmult = savegame.bmult;
+        if (typeof savegame.max != "undefined") max = savegame.max;
       }
       var part = 100000000000000000000;
       var partdisp = 0;
@@ -373,6 +393,7 @@
       bhmax = 1000000000000000000000000;
       bmult = 1;
       max = 10;
+      bhmass = 0;
       function bh(){
         bhmass = bhmax - tot;
         document.getElementById("bhmass").innerHTML=bhmass;
