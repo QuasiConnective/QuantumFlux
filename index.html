@@ -44,6 +44,12 @@
       }
     </style>
     <script>
+      function save(){
+        localStorage.setItem('part', part);
+      }
+      function load(){
+        part = localStorage.getItem('part');
+      }
       var part = 100000000000000000000;
       var partdisp = 0;
       var tot = 0;
@@ -437,7 +443,7 @@
       setInterval(function(){t(0.05);},50);
     </script>
   </head>
-  <body>
+  <body onload="load()">
     <button id="bhr" class="buttonr" type="button" onClick="reset()">Get a new Black Hole</button>
     <div id="main">
       <header>
