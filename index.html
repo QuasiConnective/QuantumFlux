@@ -45,10 +45,14 @@
     </style>
     <script>
       function save(){
-        localStorage.setItem('part', part);
+        var save = {
+          part: part
+          localStorage.setItem("save",JSON.stringify(save));
+        }
       }
       function load(){
-        part = localStorage.getItem('part');
+        var savegame = JSON.parse(localStorage.getItem("save"));
+        if (typeof savegame.part !== "undefined") part = savegame.part;
       }
       var part = 100000000000000000000;
       var partdisp = 0;
