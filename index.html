@@ -56,7 +56,10 @@
         if (typeof savegame.tot != "undefined") tot = savegame.tot;
         if (typeof savegame.mult != "undefined") mult = savegame.mult;
         if (typeof savegame.t1f != "undefined") t1f = savegame.t1f;
-        if (typeof savegame.t2f != "undefined") t2f = savegame.part;
+        if (typeof savegame.t2f != "undefined") t2f = savegame.t2f;
+      }
+      function clear(){
+        localStorage.removeItem("save");
       }
       var part = 100000000000000000000;
       var partdisp = 0;
@@ -503,6 +506,8 @@
           <p>Ok, wait till you hear this.<br>
              Robots, that program robots. This is revolutionary, I'm gonna become the most famous developer of code ever!</p>
         </div>
+        <hr>
+        <button onClick="clear()">HARD RESET</button>
       </div>
       <div id="gs1">
         <h3>Fluctuators</h3>
