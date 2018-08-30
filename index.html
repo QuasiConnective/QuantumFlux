@@ -428,6 +428,7 @@
         var b = document.getElementById("bhr");
         b.style.display="none"
       }
+      setInterval(function(){save();},50);
       setInterval(function(){incr(0.05*t1f*mult*bmult*2**(r1));},50);
       setInterval(function(){upd();},50);
       setInterval(function(){mf1(t2f*mult);},1000);
