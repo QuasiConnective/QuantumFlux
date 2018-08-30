@@ -378,6 +378,7 @@
           b.style.display ="none"
         }
       }
+      r1 = 0;
       function reset(){
         part = 0;
         tot = 0;
@@ -399,6 +400,8 @@
         t6fdisp = 0;
         t7fdisp = 0;
         t8fdisp = 0;
+        r1 += 1;
+        document.getElementById("r1").innerHTML=r1;
         var c = document.getElementById("b1");
         c.style.display="block"
         var d = document.getElementById("b2");
@@ -415,7 +418,7 @@
         var b = document.getElementById("bhr");
         b.style.display="none"
       }
-      setInterval(function(){incr(0.05*t1f*mult*bmult);},50);
+      setInterval(function(){incr(0.05*t1f*mult*bmult*2**(r1));},50);
       setInterval(function(){upd();},50);
       setInterval(function(){mf1(t2f*mult);},1000);
       setInterval(function(){mf2(t3f*mult);},1000);
@@ -505,6 +508,7 @@
         <h3>Black Hole</h3>
         <p>Remaining Mass: <a id="bhmass">0</a></p>
         <p>Multiplier: <a id="bmult">0</a></p>
+        <p>Explosion Count: <a id="r1">0</a></p>
       </div>
     </div>
   </body>
