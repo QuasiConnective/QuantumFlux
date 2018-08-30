@@ -58,9 +58,6 @@
         if (typeof savegame.t1f != "undefined") t1f = savegame.t1f;
         if (typeof savegame.t2f != "undefined") t2f = savegame.t2f;
       }
-      function clear(){
-        localStorage.removeItem("save");
-      }
       var part = 100000000000000000000;
       var partdisp = 0;
       var tot = 0;
@@ -507,7 +504,8 @@
              Robots, that program robots. This is revolutionary, I'm gonna become the most famous developer of code ever!</p>
         </div>
         <hr>
-        <button onClick="clear()">HARD RESET</button>
+        <button onClick="save()">SAVE</button>
+        <button onClick="load()">LOAD</button>
       </div>
       <div id="gs1">
         <h3>Fluctuators</h3>
