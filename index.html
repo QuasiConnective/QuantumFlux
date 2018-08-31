@@ -168,6 +168,20 @@
           var a = document.getElementById("s6");
           a.style.display ="none"
         }
+        if (tot >= 100000000000000000000){
+          var a = document.getElementById("s7");
+          a.style.display ="block"
+        } else{
+          var a = document.getElementById("s7");
+          a.style.display ="none"
+        }
+        if (tot >= 100000000000000000000000000){
+          var a = document.getElementById("s8");
+          a.style.display ="block"
+        } else{
+          var a = document.getElementById("s8");
+          a.style.display ="none"
+        }
       }
       var t1f = 1;
       var t2f = 0;
@@ -429,7 +443,6 @@
       r1 = 0;
       function reset(){
         part = 0;
-        tot = 0;
         mult = 1;
         document.getElementById("mult").innerHTML=mult;
         t1f = 1;
@@ -533,6 +546,14 @@
         <div id="s6">
           <p>Ok, wait till you hear this.<br>
              Robots, that program robots. This is revolutionary, I'm gonna become the most famous developer of code ever!</p>
+        </div>
+        <div id="s7">
+          <p>1e+18 particles, meh, but now you've got past the big wall... Making particles is easy now.<br>
+             Seeing as you have a few particles spare, why not make an assembly chain for your AIception?</p>
+        </div>
+        <div id="s8">
+          <p>Wow, you used up so much of your black hole that it evaporated and exploded destroying almost everything!<br>
+             Atleast you now have a 2x bonus and a bigger black hole!</p>
         </div>
         <hr>
         <button onClick="save()">SAVE</button>
