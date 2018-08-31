@@ -56,7 +56,9 @@
           bhmass:bhmass,
           bhmax:bhmax,
           bmult:bmult,
-          max:max
+          max:max,
+          f:f,
+          r1:r1
         }
         localStorage.setItem("save",JSON.stringify(save));
       }
@@ -77,6 +79,28 @@
         if (typeof savegame.bhmax != "undefined") bhmax = savegame.bhmax;
         if (typeof savegame.bmult != "undefined") bmult = savegame.bmult;
         if (typeof savegame.max != "undefined") max = savegame.max;
+        if (typeof savegame.f != "undefined") f = savegame.f;
+        if (typeof savegame.r1 != "undefined") r1 = savegame.r1;
+        if (f >= 1){
+          var a = document.getElementById("b1");
+          a.style.display ="none"
+        }
+        if (f >= 2){
+          var a = document.getElementById("b2");
+          a.style.display ="none"
+        }
+        if (f >= 3){
+          var a = document.getElementById("b3");
+          a.style.display ="none"
+        }
+        if (f >= 4){
+          var a = document.getElementById("b4");
+          a.style.display ="none"
+        }
+        if (f >= 5){
+          var a = document.getElementById("b5");
+          a.style.display ="none"
+        }
       }
       var part = 0;
       var partdisp = 0;
@@ -366,12 +390,14 @@
         document.getElementById("time").innerHTML=time.toFixed(2);
       }
       var mult = 1;
+      var f = 0;
       function prchb(x){
         if (x === 0){
           if (part >= 1000){
             part -= 1000;
             mult *= 6;
             document.getElementById("mult").innerHTML= mult;
+            f += 1;
             var a = document.getElementById("b1");
             a.style.display ="none"
           }
@@ -381,6 +407,7 @@
             part -= 1000000;
             mult *= 6;
             document.getElementById("mult").innerHTML= mult;
+            f += 1;
             var a = document.getElementById("b2");
             a.style.display ="none"
           }
@@ -390,6 +417,7 @@
             part -= 1000000000;
             mult *= 6;
             document.getElementById("mult").innerHTML= mult;
+            f += 1;
             var a = document.getElementById("b3");
             a.style.display ="none"
           }
@@ -399,6 +427,7 @@
             part -= 1000000000000;
             mult *= 12;
             document.getElementById("mult").innerHTML= mult;
+            f += 1;
             var a = document.getElementById("b4");
             a.style.display ="none"
           }
@@ -408,6 +437,7 @@
             part -= 1000000000000000;
             mult *= 30;
             document.getElementById("mult").innerHTML= mult;
+            f += 1;
             var a = document.getElementById("b5");
             a.style.display ="none"
           }
