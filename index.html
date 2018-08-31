@@ -44,6 +44,7 @@
         var save = {
           part:part,
           tot:tot,
+          tot2:tot2,
           mult:mult,
           t1f:t1f,
           t2f:t2f,
@@ -66,6 +67,7 @@
         var savegame = JSON.parse(localStorage.getItem("save"));
         if (typeof savegame.part != "undefined") part = savegame.part;
         if (typeof savegame.tot != "undefined") tot = savegame.tot;
+        if (typeof savegame.tot2 != "undefined") tot2 = savegame.tot2;
         if (typeof savegame.mult != "undefined") mult = savegame.mult;
         if (typeof savegame.t1f != "undefined") t1f = savegame.t1f;
         if (typeof savegame.t2f != "undefined") t2f = savegame.t2f;
@@ -81,6 +83,8 @@
         if (typeof savegame.max != "undefined") max = savegame.max;
         if (typeof savegame.f != "undefined") f = savegame.f;
         if (typeof savegame.r1 != "undefined") r1 = savegame.r1;
+        document.getElementById("mult").innerHTML=mult;
+        document.getElementById("r1").innerHTML=r1;
         if (f >= 1){
           var a = document.getElementById("b1");
           a.style.display ="none"
@@ -105,10 +109,12 @@
       var part = 0;
       var partdisp = 0;
       var tot = 0;
+      var tot2 = 0;
       var totdisp = 0;
       function incr(x){
         part += x;
         tot += x;
+        tot2 += x;
         if (part >= 1000){
           partdisp = part.toExponential(2);
         } else {
@@ -448,10 +454,10 @@
       max = 10;
       bhmass = 0;
       function bh(){
-        bhmass = bhmax - tot;
+        bhmass = bhmax - tot2;
         document.getElementById("bhmass").innerHTML=bhmass;
         if (bmult < 100){
-          bmult = 1 + tot / 100000000000000000000000000;
+          bmult = 1 + tot2 / 100000000000000000000000000;
         } else{
           bmult = max;
         }
@@ -474,6 +480,7 @@
       function reset(){
         part = 0;
         mult = 1;
+        tot2 = 0;
         document.getElementById("mult").innerHTML=mult;
         t1f = 1;
         t2f = 0;
