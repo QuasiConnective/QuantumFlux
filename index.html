@@ -58,7 +58,7 @@
           bhmax:bhmax,
           bmult:bmult,
           max:max,
-          f:f,
+          boosts:boosts,
           r1:r1
         }
         localStorage.setItem("save",JSON.stringify(save));
@@ -81,27 +81,27 @@
         bhmax = savegame.bhmax;
         bmult = savegame.bmult;
         max = savegame.max;
-        f = savegame.f;
+        boosts = savegame.boosts;
         r1 = savegame.r1;
         document.getElementById("mult").innerHTML=mult;
-        document.getElementById("f").innerHTML=f;
-        if (f >= 1){
+        document.getElementById("boosts").innerHTML=boosts;
+        if (boosts >= 1){
           var a = document.getElementById("b1");
           a.style.display="none"
         }
-        if (f >= 2){
+        if (boosts >= 2){
           var a = document.getElementById("b2");
           a.style.display="none"
         }
-        if (f >= 3){
+        if (boosts >= 3){
           var a = document.getElementById("b3");
           a.style.display="none"
         }
-        if (f >= 4){
+        if (boosts >= 4){
           var a = document.getElementById("b4");
           a.style.display="none"
         }
-        if (f >= 5){
+        if (boosts >= 5){
           var a = document.getElementById("b5");
           a.style.display="none"
         }
@@ -397,14 +397,14 @@
         document.getElementById("time").innerHTML=time.toFixed(2);
       }
       var mult = 1;
-      var f = 0;
+      var boosts = 0;
       function prchb(x){
         if (x === 0){
           if (part >= 1000){
             part -= 1000;
             mult *= 6;
             document.getElementById("mult").innerHTML= mult;
-            f += 1;
+            boosts += 1;
             var a = document.getElementById("b1");
             a.style.display ="none"
           }
@@ -414,7 +414,7 @@
             part -= 1000000;
             mult *= 6;
             document.getElementById("mult").innerHTML= mult;
-            f += 1;
+            boosts += 1;
             var a = document.getElementById("b2");
             a.style.display ="none"
           }
@@ -424,7 +424,7 @@
             part -= 1000000000;
             mult *= 6;
             document.getElementById("mult").innerHTML= mult;
-            f += 1;
+            boosts += 1;
             var a = document.getElementById("b3");
             a.style.display ="none"
           }
@@ -434,7 +434,7 @@
             part -= 1000000000000;
             mult *= 12;
             document.getElementById("mult").innerHTML= mult;
-            f += 1;
+            boosts += 1;
             var a = document.getElementById("b4");
             a.style.display ="none"
           }
@@ -444,7 +444,7 @@
             part -= 1000000000000000;
             mult *= 30;
             document.getElementById("mult").innerHTML= mult;
-            f += 1;
+            boosts += 1;
             var a = document.getElementById("b5");
             a.style.display ="none"
           }
@@ -481,7 +481,7 @@
       function reset(){
         part = 0;
         mult = 1;
-        f = 0;
+        boosts = 0;
         tot2 = 0;
         document.getElementById("mult").innerHTML=mult;
         t1f = 1;
@@ -612,7 +612,7 @@
       <div id="gs2">
         <h3>Boosts</h3>
         <p>Current Multiplier: <a id="mult">1</a></p>
-        <p>Amount Purchased: <a id="f">0</a></p>
+        <p>Boost Amount Purchased: <a id="boosts">0</a></p>
         <button type="button" onClick="prchb(0)" id="b1">Quarks 1e+3₽</button>
         <button type="button" onClick="prchb(1)" id="b2">Leptons 1e+6₽</button>
         <button type="button" onClick="prchb(2)" id="b3">Fundamental Bosons 1e+9₽</button>
