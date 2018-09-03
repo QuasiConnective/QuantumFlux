@@ -59,7 +59,8 @@
           bmult:bmult,
           max:max,
           boosts:boosts,
-          r1:r1
+          r1:r1,
+          time:time
         }
         localStorage.setItem("save",JSON.stringify(save));
       }
@@ -83,6 +84,7 @@
         max = savegame.max;
         boosts = savegame.boosts;
         r1 = savegame.r1;
+        time = savegame.time:
         document.getElementById("mult").innerHTML=mult;
         document.getElementById("boosts").innerHTML=boosts;
         if (boosts >= 1){
