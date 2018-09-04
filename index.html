@@ -108,8 +108,7 @@
           a.style.display="none"
         }
       }
-      function clear(){
-        localStorage.clear();
+      function clr(){
         part = 0;
         tot = 0;
         tot2 = 0;
@@ -129,6 +128,7 @@
         boosts = 0;
         r1 = 0;
         time = 0;
+        localStorage.removeItem("save");
       }
       var part = 0;
       var partdisp = 0;
@@ -622,7 +622,7 @@
         <hr>
         <button onClick="save()">SAVE</button>
         <button onClick="load()">LOAD</button>
-        <button onClick="clear()">CLEAR</button>
+        <button onClick="clr()">CLEAR</button>
       </div>
       <div id="gs1">
         <h3>Fluctuators</h3>
