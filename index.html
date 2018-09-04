@@ -87,26 +87,6 @@
         time = savegame.time;
         document.getElementById("mult").innerHTML=mult;
         document.getElementById("boosts").innerHTML=boosts;
-        if (boosts >= 1){
-          var a = document.getElementById("b1");
-          a.style.display="none"
-        }
-        if (boosts >= 2){
-          var a = document.getElementById("b2");
-          a.style.display="none"
-        }
-        if (boosts >= 3){
-          var a = document.getElementById("b3");
-          a.style.display="none"
-        }
-        if (boosts >= 4){
-          var a = document.getElementById("b4");
-          a.style.display="none"
-        }
-        if (boosts >= 5){
-          var a = document.getElementById("b5");
-          a.style.display="none"
-        }
       }
       function clr(){
         part = 0;
@@ -185,6 +165,26 @@
         } else{
           var a = document.getElementById("gs3");
           a.style.display ="none"
+        }
+        if (boosts >= 1){
+          var a = document.getElementById("b1");
+          a.style.display="none"
+        }
+        if (boosts >= 2){
+          var a = document.getElementById("b2");
+          a.style.display="none"
+        }
+        if (boosts >= 3){
+          var a = document.getElementById("b3");
+          a.style.display="none"
+        }
+        if (boosts >= 4){
+          var a = document.getElementById("b4");
+          a.style.display="none"
+        }
+        if (boosts >= 5){
+          var a = document.getElementById("b5");
+          a.style.display="none"
         }
         document.getElementById("r1").innerHTML=r1;
       }
