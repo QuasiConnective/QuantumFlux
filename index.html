@@ -108,6 +108,28 @@
           a.style.display="none"
         }
       }
+      function clear(){
+        localStorage.clear();
+        part = 0;
+        tot = 0;
+        tot2 = 0;
+        mult = 1;
+        t1f = 1;
+        t2f = 0;
+        t3f = 0;
+        t4f = 0;
+        t5f = 0;
+        t6f = 0;
+        t7f = 0;
+        t8f = 0;
+        bhmass = 0;
+        bhmax = 1000000000000000000000000;
+        bmult = 1;
+        max = 10;
+        boosts = 0;
+        r1 = 0;
+        time = 0;
+      }
       var part = 0;
       var partdisp = 0;
       var tot = 0;
@@ -600,6 +622,7 @@
         <hr>
         <button onClick="save()">SAVE</button>
         <button onClick="load()">LOAD</button>
+        <button onClick="clear()">CLEAR</button>
       </div>
       <div id="gs1">
         <h3>Fluctuators</h3>
