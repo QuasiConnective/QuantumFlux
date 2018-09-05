@@ -459,6 +459,7 @@
       bmult = 1;
       max = 10;
       bhmass = 0;
+      sing = 0;
       function bh(){
         bhmass = bhmax - tot2;
         document.getElementById("bhmass").innerHTML=bhmass;
@@ -507,6 +508,7 @@
         t7fdisp = 0;
         t8fdisp = 0;
         r1 += 1;
+        sing += 1;
         document.getElementById("r1").innerHTML=r1;
         var c = document.getElementById("b1");
         c.style.display="block"
