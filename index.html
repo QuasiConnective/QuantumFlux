@@ -187,6 +187,13 @@
           a.style.display="none"
         }
         document.getElementById("r1").innerHTML=r1;
+        if (r1 >= 3){
+          var x = document.getElementById("tdil");
+          x.style.display="block"
+        } else {
+          var x = document.getElementById("tdil");
+          x.style.display="none"
+        }
       }
       function upd2(){
         if (tot >= 1000){
@@ -652,7 +659,7 @@
         <p>Multiplier: <a id="bmult">0</a></p>
         <hr>
         <p>Explosion Count: <a id="r1">0</a></p>
-        <div>
+        <div id="tdil">
           <hr>
           <h4>Time Dialtion</h4>
         </div>
