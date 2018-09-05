@@ -19,7 +19,8 @@
           boosts:boosts,
           r1:r1,
           sing:sing,
-          time:time
+          time:time,
+          font:font
         }
         localStorage.setItem("save",JSON.stringify(save));
       }
@@ -45,6 +46,7 @@
         r1 = savegame.r1;
         sing = savegame.sing;
         time = savegame.time;
+        font= savegame.font;
         document.getElementById("mult").innerHTML=mult;
         document.getElementById("sing").innerHTML=sing;
       }
@@ -99,6 +101,7 @@
       function cgs(x){
         gs = x;
       }
+      font = 0;
       function upd(){
         if (gs === 0){
           var a = document.getElementById("gs0");
@@ -155,6 +158,12 @@
         } else {
           var x = document.getElementById("tdil");
           x.style.display="none"
+        }
+        if (font === 0) {
+          document.getElementById("body").style.fontFamily = "serif";
+        }
+        if (font === 1) {
+          document.getElementById("body").style.fontFamily = "sans-serif";
         }
       }
       function upd2(){
