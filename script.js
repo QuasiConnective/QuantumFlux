@@ -46,7 +46,7 @@
         sing = savegame.sing;
         time = savegame.time;
         document.getElementById("mult").innerHTML=mult;
-        document.getElementById("boosts").innerHTML=boosts;
+        document.getElementById("sing").innerHTML=sing;
       }
       function clr(){
         part = 0;
@@ -70,6 +70,7 @@
         time = 0;
         localStorage.removeItem("save");
         document.getElementById("mult").innerHTML=mult;
+        document.getElementById("sing").innerHTML=sing;
       }
       var part = 0;
       var partdisp = 0;
