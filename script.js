@@ -80,6 +80,9 @@
       var tot = 0;
       var tot2 = 0;
       var totdisp = 0;
+      function chngf(x){
+        font = x;
+      }
       function incr(x){
         part += x;
         tot += x;
