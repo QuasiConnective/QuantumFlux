@@ -203,6 +203,20 @@
           var a = document.getElementById("s8");
           a.style.display ="none"
         }
+        if (tot >= 100000000000000000000000000){
+          var a = document.getElementById("s9");
+          a.style.display ="block"
+        } else{
+          var a = document.getElementById("s9");
+          a.style.display ="none"
+        }
+        if (tot >= 100000000000000000000000000000000){
+          var a = document.getElementById("s10");
+          a.style.display ="block"
+        } else{
+          var a = document.getElementById("s10");
+          a.style.display ="none"
+        }
       }
       var t1f = 1;
       var t2f = 0;
