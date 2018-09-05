@@ -7,13 +7,13 @@ Webpage: https://quasiconnective.github.io/QuantumFlux/
 
 How to Play:
 
-You start with 1 qufid (Quantum Feild Interaction Device) which will start generating ₽ for you
+You start with 1 QFID (Quantum Feild Interaction Device) which will start generating ₽ (particles, not Russian money) for you.
 
-with ₽ you can buy more qufid's to make more ₽ untill you have enough ₽ to buy higher level builders to make qufids automatically and so on
+With ₽ you can buy more QFID's to make more ₽ until you have enough ₽ to buy higher level builders to make QFID's automatically and so on.
 
-boosts start at 1000 ₽ and multiply the speed of every fluctuator you own
+Boosts start at 1000₽ and multiply the speed of every fluctuator you own.
 
-the aim to make so many particules that your black hole is used up (can be monitored in the black hole tab) and you start the game over with a multiplier
+The aim to make so many particles that your black hole is used up (can be monitored in the Black Hole tab) and you start the game over with a production multiplier and a bigger black hole.
 
 Contribution Guide:
 
