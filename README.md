@@ -7,7 +7,7 @@ Webpage: https://quasiconnective.github.io/QuantumFlux/
 
 How to Play:
 
-You start with 1 QFID (Quantum Feild Interaction Device) which will start generating ₽ (particles, not Russian money) for you.
+You start with 1 QFID (Quantum Field Interaction Device) which will start generating ₽ (particles, not Russian money) for you.
 
 With ₽ you can buy more QFID's to make more ₽ until you have enough ₽ to buy higher level builders to make QFID's automatically and so on.
 
