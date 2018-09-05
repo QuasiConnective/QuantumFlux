@@ -510,6 +510,7 @@
         r1 += 1;
         sing += 1;
         document.getElementById("r1").innerHTML=r1;
+        document.getElementById("sing").innerHTML=sing;
         var c = document.getElementById("b1");
         c.style.display="block"
         var d = document.getElementById("b2");
