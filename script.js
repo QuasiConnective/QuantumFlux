@@ -67,6 +67,7 @@
         max = 10;
         boosts = 0;
         r1 = 0;
+        sing = 0;
         time = 0;
         localStorage.removeItem("save");
         document.getElementById("mult").innerHTML=mult;
