@@ -1,3 +1,6 @@
+body {
+  font-family: sans-serif;
+}  
 button {
   background: #000000;
   font-weight: bold;
