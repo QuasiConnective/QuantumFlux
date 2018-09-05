@@ -18,6 +18,7 @@
           max:max,
           boosts:boosts,
           r1:r1,
+          sing:sing,
           time:time
         }
         localStorage.setItem("save",JSON.stringify(save));
@@ -42,6 +43,7 @@
         max = savegame.max;
         boosts = savegame.boosts;
         r1 = savegame.r1;
+        sing = savegame.sing;
         time = savegame.time;
         document.getElementById("mult").innerHTML=mult;
         document.getElementById("boosts").innerHTML=boosts;
