@@ -1,35 +1,35 @@
 button {
-background: #000000;
-font-weight: bold;
-border: 2px solid #FFFFFF;
-border-radius: 4px;
-transition-duration: 0.2s;
-cursor: pointer;
-color: #FFFFFF;
+  background: #000000;
+  font-weight: bold;
+  border: 2px solid #FFFFFF;
+  border-radius: 4px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  color: #FFFFFF;
 }
 button:hover {
-background: #FFFFFF;
-font-weight: bold;
-border: 2px solid #000000;
-border-radius: 4px;
-color: #000000;
+  background: #FFFFFF;
+  font-weight: bold;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  color: #000000;
 }
 .button1 {
-background: #000000;
-font-weight: bold;
-border: 2px solid #00AFFF;
-border-radius: 4px;
-transition-duration: 0.2s;
-cursor: pointer;
-color: #00AFFF;
+  background: #000000;
+  font-weight: bold;
+  border: 2px solid #00AFFF;
+  border-radius: 4px;
+  transition-duration: 0.2s;
+  cursor: pointer;
+  color: #00AFFF;
 }
 .button1:hover {
-background: #00AFFF;
-font-weight: bold;
-border: 2px solid #00AFFF;
-border-radius: 4px;
-color: #FFFFFF;
+  background: #00AFFF;
+  font-weight: bold;
+  border: 2px solid #00AFFF;
+  border-radius: 4px;
+  color: #FFFFFF;
 }
 .buttonr {
-padding:32px 32px;
+  padding:32px 32px;
 }
