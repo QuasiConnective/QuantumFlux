@@ -111,6 +111,7 @@ function cgs(x) {
 }
 var font = 0;
 var pps = 0;
+var ppsdisp = 0;
 function upd() {
   document.getElementById("partdisp2").innerHTML = partdisp;
   if (gs === 0) {
@@ -179,8 +180,13 @@ function upd() {
     bhmax = 1e+60;
   }
   pps = t1f*mult*bmult*sps*(2**r1);
-  document.getElementById("pps").innerHTML = pps;
-  document.getElementById("pps2").innerHTML = pps;
+  if (pps >= 1000) {
+    ppsdisp = pps.toExponential(2);
+  } else {
+    ppsdisp = pps.toFixed(0);
+  }
+  document.getElementById("pps").innerHTML = ppsdisp;
+  document.getElementById("pps2").innerHTML = ppsdisp;
 }
 function upds() {
   if (tot >= 1000) {
