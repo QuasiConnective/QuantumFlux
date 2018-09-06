@@ -561,4 +561,4 @@
       setInterval(function(){bh();},50);
       setInterval(function(){bhtest();},50);
       setInterval(function(){t(0.05);},50);
-      setInterval(function(){save();},5000);
+      setInterval(function(){save();},30000);
