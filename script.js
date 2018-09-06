@@ -441,9 +441,15 @@ function mf7(x) {
   document.getElementById("t8fdisp").innerHTML = t8fdisp;
 }
 var time = 0;
+var tdisp = 0;
 function t(x) {
   time += x;
-  document.getElementById("time").innerHTML = time.toFixed(2);
+  if (time <= 1000) {
+    tdisp = time.toFixed(2);
+  } else {
+    tdisp = time.toExponential(2);
+  }
+  document.getElementById("time").innerHTML = tdisp;
 }
 var mult = 1;
 var boosts = 0;
@@ -615,5 +621,5 @@ setInterval(function(){mf7(t8f*mult*sps);},1000);
 setInterval(function(){upds();},50);
 setInterval(function(){bh();},50);
 setInterval(function(){bhtest();},50);
-setInterval(function(){t(0.05);},50);
+setInterval(function(){t(0.05*sps);},50);
 setInterval(function(){save();},30000);
