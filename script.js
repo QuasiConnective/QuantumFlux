@@ -523,7 +523,9 @@ function reset() {
   part = 0;
   mult = 1;
   boosts = 0;
-  tot = bhmax;
+  if (bhmax <= 1e+59){
+    tot = bhmax;
+  }
   tot2 = 0;
   document.getElementById("mult").innerHTML = mult;
   t1f = 1;
