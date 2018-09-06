@@ -23,6 +23,9 @@
           font:font
         }
         localStorage.setItem("save",JSON.stringify(save));
+        var x = document.getElementById("autosave");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
       }
       function load(){
         var savegame = JSON.parse(localStorage.getItem("save"));
