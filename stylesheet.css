@@ -34,7 +34,7 @@ button:hover {
   padding:32px 32px;
 }
 #autosave {
-  visibility:hidden;
+  opacity: 0;
   background-color: #000000;
   color: #FFFFFF;
   text-align:center;
@@ -43,25 +43,9 @@ button:hover {
   position:fixed;
   left: 50%;
   bottom: 30px;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
 }
 #autosave.show {
-  visibility:visible;  
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-   animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-@-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
-    to {bottom: 30px; opacity: 1;}
-}
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
-@-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
-    to {bottom: 0; opacity: 0;}
-}
-@keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
+  opacity: 1;
 }
