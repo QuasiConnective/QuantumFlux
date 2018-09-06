@@ -43,6 +43,8 @@ button:hover {
   position:fixed;
   left: 50%;
   bottom: 30px;
+  -webkit-transition: opacity 2s;		
+   transition: opacity 2s;
 }
 #autosave.show {
   opacity: 1;
