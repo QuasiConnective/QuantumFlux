@@ -177,6 +177,8 @@ function upd() {
   if (bhmax >= 1e+61) {
     bhmax = 1e+60;
   }
+  pps = t1f*mult*bmult*sps*(2**r1);
+  document.getElementById("pps").innerHTML = pps;
 }
 function upds() {
   if (tot >= 1000) {
