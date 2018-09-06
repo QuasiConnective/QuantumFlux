@@ -109,6 +109,7 @@
       }
       font = 0;
       function upd(){
+        document.getElementById("partdisp2").innerHTML = partdisp;
         if (gs === 0){
           var a = document.getElementById("gs0");
           a.style.display ="block"
@@ -175,7 +176,7 @@
           bhmax = 1e+60;
         }
       }
-      function upd2(){
+      function upds(){
         if (tot >= 1000){
           var a = document.getElementById("s2");
           a.style.display ="block"
@@ -560,7 +561,7 @@
       setInterval(function(){mf5(t6f*mult);},1000);
       setInterval(function(){mf6(t7f*mult);},1000);
       setInterval(function(){mf7(t8f*mult);},1000);
-      setInterval(function(){upd2();},50);
+      setInterval(function(){upds();},50);
       setInterval(function(){bh();},50);
       setInterval(function(){bhtest();},50);
       setInterval(function(){t(0.05);},50);
