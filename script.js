@@ -109,7 +109,8 @@ var gs = 0;
 function cgs(x) {
   gs = x;
 }
-font = 0;
+var font = 0;
+var pps = 0;
 function upd() {
   document.getElementById("partdisp2").innerHTML = partdisp;
   if (gs === 0) {
