@@ -180,6 +180,7 @@ function upd() {
   }
   pps = t1f*mult*bmult*sps*(2**r1);
   document.getElementById("pps").innerHTML = pps;
+  document.getElementById("pps2").innerHTML = pps;
 }
 function upds() {
   if (tot >= 1000) {
