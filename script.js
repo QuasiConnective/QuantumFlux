@@ -83,7 +83,7 @@ function clr() {
   localStorage.removeItem("save");
   document.getElementById("mult").innerHTML = mult;
   document.getElementById("sing").innerHTML = sing;
-  document.getElementById("sps").innerHTML = sps;
+  document.getElementById("sps").innerHTML = spsdisp;
 }
 var part = 0;
 var partdisp = 0;
