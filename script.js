@@ -187,6 +187,12 @@ function upd() {
   }
   document.getElementById("pps").innerHTML = ppsdisp;
   document.getElementById("pps2").innerHTML = ppsdisp;
+  if (sps >= 1000) {
+    spsdisp = sps.toExponential(2);
+  } else {
+    spsdisp = sps.toFixed(0);
+  }
+  document.getElementById("sps").innerHTML = spsdisp;
 }
 function upds() {
   if (tot >= 1000) {
@@ -567,12 +573,29 @@ function reset() {
   b.style.display = "none"
 }
 var sps = 1;
+var spsdisp = 1;
 function prchtd(x){
   if (x === 0){
     if (sing >= 5){
       sing -= 5;
       document.getElementById("sing").innerHTML = sing;
       sps += 1;
+      document.getElementById("sps").innerHTML = sps;
+    }
+  }
+  if (x === 1){
+    if (sing >= 10){
+      sing -= 10;
+      document.getElementById("sing").innerHTML = sing;
+      sps += 60;
+      document.getElementById("sps").innerHTML = sps;
+    }
+  }
+  if (x === 2){
+    if (sing >= 15){
+      sing -= 15;
+      document.getElementById("sing").innerHTML = sing;
+      sps += 3600;
       document.getElementById("sps").innerHTML = sps;
     }
   }
