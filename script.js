@@ -567,7 +567,16 @@ function reset() {
   b.style.display = "none"
 }
 var sps = 1;
-function prchtd(x) {}
+function prchtd(x){
+  if (x === 0){
+    if (sing >= 5){
+      sing -= 5;
+      document.getElementById("sing").innerHTML = sing;
+      sps += 1;
+      document.getElementById("sps").innerHTML = sps;
+    }
+  }
+}
 setInterval(function(){incr(0.05*t1f*mult*bmult*sps*(2**r1));},50);
 setInterval(function(){upd();},50);
 setInterval(function(){mf1(t2f*mult*sps);},1000);
