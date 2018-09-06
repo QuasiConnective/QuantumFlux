@@ -20,7 +20,8 @@ function save() {
     r1: r1,
     sing: sing,
     time: time,
-    font: font
+    font: font,
+    sps: sps
   }
   localStorage.setItem("save", JSON.stringify(save));
   var x = document.getElementById("autosave");
@@ -52,8 +53,10 @@ function load() {
   sing = savegame.sing;
   time = savegame.time;
   font = savegame.font;
+  sps = savegame.sps;
   document.getElementById("mult").innerHTML = mult;
   document.getElementById("sing").innerHTML = sing;
+  document.getElementById("sps").innerHTML = sps;
 }
 function clr() {
   part = 0;
