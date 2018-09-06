@@ -20,8 +20,7 @@ function save() {
     r1: r1,
     sing: sing,
     time: time,
-    font: font,
-    sps: sps
+    font: font
   }
   localStorage.setItem("save", JSON.stringify(save));
   var x = document.getElementById("autosave");
@@ -53,10 +52,8 @@ function load() {
   sing = savegame.sing;
   time = savegame.time;
   font = savegame.font;
-  sps = savegame.sps;
   document.getElementById("mult").innerHTML = mult;
   document.getElementById("sing").innerHTML = sing;
-  document.getElementById("sps").innerHTML = spsdisp;
 }
 function clr() {
   part = 0;
@@ -79,11 +76,9 @@ function clr() {
   r1 = 0;
   sing = 0;
   time = 0;
-  sps = 0;
   localStorage.removeItem("save");
   document.getElementById("mult").innerHTML = mult;
   document.getElementById("sing").innerHTML = sing;
-  document.getElementById("sps").innerHTML = spsdisp;
 }
 var part = 0;
 var partdisp = 0;
@@ -192,12 +187,6 @@ function upd() {
   }
   document.getElementById("pps").innerHTML = ppsdisp;
   document.getElementById("pps2").innerHTML = ppsdisp;
-  if (sps >= 1000) {
-    spsdisp = sps.toExponential(2);
-  } else {
-    spsdisp = sps.toFixed(0);
-  }
-  document.getElementById("sps").innerHTML = spsdisp;
 }
 function upds() {
   if (tot >= 1000) {
@@ -583,11 +572,7 @@ function reset() {
   var b = document.getElementById("bhr");
   b.style.display = "none"
 }
-var sps = 1;
-var spsdisp = 1;
-function prchtd(x){
-}
-setInterval(function(){incr(0.05*t1f*mult*bmult(2**r1));},50);
+setInterval(function(){incr(0.05*t1f*mult*bmult*(2**r1));},50);
 setInterval(function(){upd();},50);
 setInterval(function(){mf1(t2f*mult);},1000);
 setInterval(function(){mf2(t3f*mult);},1000);
@@ -599,5 +584,5 @@ setInterval(function(){mf7(t8f*mult);},1000);
 setInterval(function(){upds();},50);
 setInterval(function(){bh();},50);
 setInterval(function(){bhtest();},50);
-setInterval(function(){t(0.05*sps);},50);
+setInterval(function(){t(0.05);},50);
 setInterval(function(){save();},30000);
