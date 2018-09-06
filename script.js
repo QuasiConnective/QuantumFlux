@@ -56,7 +56,7 @@ function load() {
   sps = savegame.sps;
   document.getElementById("mult").innerHTML = mult;
   document.getElementById("sing").innerHTML = sing;
-  document.getElementById("sps").innerHTML = sps;
+  document.getElementById("sps").innerHTML = spsdisp;
 }
 function clr() {
   part = 0;
@@ -79,9 +79,11 @@ function clr() {
   r1 = 0;
   sing = 0;
   time = 0;
+  sps = 0;
   localStorage.removeItem("save");
   document.getElementById("mult").innerHTML = mult;
   document.getElementById("sing").innerHTML = sing;
+  document.getElementById("sps").innerHTML = sps;
 }
 var part = 0;
 var partdisp = 0;
@@ -589,7 +591,7 @@ function prchtd(x){
       sing -= 5;
       document.getElementById("sing").innerHTML = sing;
       sps += 1;
-      document.getElementById("sps").innerHTML = sps;
+      document.getElementById("sps").innerHTML = spsdisp;
     }
   }
   if (x === 1){
@@ -597,7 +599,7 @@ function prchtd(x){
       sing -= 10;
       document.getElementById("sing").innerHTML = sing;
       sps += 60;
-      document.getElementById("sps").innerHTML = sps;
+      document.getElementById("sps").innerHTML = spsdisp;
     }
   }
   if (x === 2){
@@ -605,7 +607,7 @@ function prchtd(x){
       sing -= 15;
       document.getElementById("sing").innerHTML = sing;
       sps += 3600;
-      document.getElementById("sps").innerHTML = sps;
+      document.getElementById("sps").innerHTML = spsdisp;
     }
   }
 }
