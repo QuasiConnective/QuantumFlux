@@ -33,3 +33,17 @@ button:hover {
 .buttonr {
   padding:32px 32px;
 }
+#autosave {
+  visibility:hidden;
+  background-color: #000000;
+  color: #FFFFFF;
+  text-align:center;
+  border-radius:2px;
+  padding:16px;
+  position:fixed;
+  left: 50%;
+  bottom: 30px;
+}
+#autosave.show {
+  visibility:visible;  
+}
