@@ -168,6 +168,9 @@
         if (font === 1) {
           document.getElementById("body").style.fontFamily = "sans-serif";
         }
+        if (bhmax >= 1e+61) {
+          bhmax = 1e+60;
+        }
       }
       function upd2(){
         if (tot >= 1000){
