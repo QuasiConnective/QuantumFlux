@@ -557,6 +557,7 @@ function bhtest() {
     a.style.display = "block"
     var b = document.getElementById("bhr");
     b.style.display = "none"
+    planb = 0;
   }
 }
 var r1 = 0;
@@ -673,12 +674,6 @@ function prchtd(x){
       sing -= 250;
       sps += 31536000000000;
     }
-  }
-}
-function planbf() {
-  if (planb = 1) {
-    reset()
-  } else {
   }
 }
 function ttest() {
