@@ -55,7 +55,6 @@ function load() {
   font = savegame.font;
   sps = savegame.sps;
   document.getElementById("mult").innerHTML = mult;
-  document.getElementById("sing").innerHTML = singdisp;
   document.getElementById("sps").innerHTML = spsdisp;
 }
 function clr() {
@@ -82,7 +81,6 @@ function clr() {
   sps = 1;
   localStorage.removeItem("save");
   document.getElementById("mult").innerHTML = mult;
-  document.getElementById("sing").innerHTML = singdisp;
 }
 var part = 0;
 var partdisp = 0;
@@ -193,12 +191,7 @@ function upd() {
   }
   document.getElementById("pps").innerHTML = ppsdisp;
   document.getElementById("pps2").innerHTML = ppsdisp;
-  if (sing >= 1000) {
-    singdisp = sing.toExponential(2);
-  } else {
-    singdisp = sing.toFixed(0);
-  }
-  document.getElementById("sing").innerHTML = singdisp;
+  document.getElementById("sing").innerHTML = sing;
   if (sps >= 1000) {
     spsdisp = sps.toExponential(2);
   } else {
@@ -518,8 +511,6 @@ var bhmax = 1000000000000000000000000;
 var bmult = 1;
 var max = 10;
 var bhmass = 0;
-var sing = 0;
-var singdisp = 0;
 function bh() {
   bhmass = bhmax - tot2;
   document.getElementById("bhmass").innerHTML = bhmass;
@@ -543,7 +534,8 @@ function bhtest() {
     b.style.display = "none"
   }
 }
-r1 = 0;
+var r1 = 0;
+var sing = 0;
 function reset() {
   part = 0;
   mult = 1;
@@ -594,8 +586,7 @@ function prchtd(x){
   if (x === 0){
     if (sing >= 5){
       sing -= 5;
-      sps += 1
-      document.getElementById("sing").innerHTML = "singdisp"
+      sps += 1;
     }
   }
 }
