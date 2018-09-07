@@ -76,6 +76,7 @@ function clr() {
   sing = 0;
   time = 0;
   sps = 1;
+  planb = 0;
   localStorage.removeItem("save");
   document.getElementById("mult").innerHTML = mult;
 }
@@ -677,14 +678,15 @@ function prchtd(x){
 function planbf() {
   if (planb = 1) {
     reset()
+  } else {
   }
 }
 function ttest() {
   if (time >= 1.5e+17) {
     var a = document.getElementById("main");
-      a.style.display = "none"
-      var b = document.getElementById("bhr");
-      b.style.display = "block"
+    a.style.display = "none"
+    var b = document.getElementById("bhr");
+    b.style.display = "block"
   }
 }
 setInterval(function(){incr(0.05*t1f*sps*mult*bmult*(2**r1));},50);
