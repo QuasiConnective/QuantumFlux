@@ -452,7 +452,7 @@ function t(x) {
   } else {
     tdisp = time.toExponential(2);
   }
-  document.getElementById("time").innerHTML = tdisp;
+  document.getElementById("tdisp").innerHTML = tdisp;
 }
 var mult = 1;
 var boosts = 0;
