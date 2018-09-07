@@ -81,7 +81,7 @@ function clr() {
   document.getElementById("mult").innerHTML = mult;
 }
 function debug() {
-  part = 1e+60;
+  incr(1e+60);
 }
 var part = 0;
 var partdisp = 0;
@@ -120,21 +120,27 @@ var spsdisp = 1;
 function upd() {
   if (boosts === 0) {
     mult = 1;
+    document.getElementById("mult").innerHTML = mult;
   }
   if (boosts === 1) {
     mult = 6;
+    document.getElementById("mult").innerHTML = mult;
   }
   if (boosts === 2) {
     mult = 36;
+    document.getElementById("mult").innerHTML = mult;
   }
   if (boosts === 3) {
     mult = 216;
+    document.getElementById("mult").innerHTML = mult;
   }
   if (boosts === 4) {
     mult = 2592;
+    document.getElementById("mult").innerHTML = mult;
   }
   if (boosts === 5) {
     mult = 77760;
+    document.getElementById("mult").innerHTML = mult;
   }
   document.getElementById("partdisp2").innerHTML = partdisp;
   if (gs === 0) {
