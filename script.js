@@ -538,10 +538,14 @@ function bh() {
 }
 function bhtest() {
   if (bhmass <= 0) {
-    var a = document.getElementById("main");
-    a.style.display = "none"
-    var b = document.getElementById("bhr");
-    b.style.display = "block"
+    if (r1 <= 100){
+      var a = document.getElementById("main");
+      a.style.display = "none"
+      var b = document.getElementById("bhr");
+      b.style.display = "block"
+    } else {
+      reset()
+    }
   } else {
     var a = document.getElementById("main");
     a.style.display = "block"
