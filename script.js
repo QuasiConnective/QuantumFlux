@@ -183,14 +183,6 @@ function upd() {
   if (bhmax >= 1e+61) {
     bhmax = 1e+60;
   }
-  pps = t1f*mult*bmult*sps*(2**r1);
-  if (pps >= 1000) {
-    ppsdisp = pps.toExponential(2);
-  } else {
-    ppsdisp = pps.toFixed(0);
-  }
-  document.getElementById("pps").innerHTML = ppsdisp;
-  document.getElementById("pps2").innerHTML = ppsdisp;
   document.getElementById("sing").innerHTML = sing;
   if (sps >= 1000) {
     spsdisp = sps.toExponential(2);
@@ -263,6 +255,16 @@ function upds() {
     var a = document.getElementById("s10");
     a.style.display = "none"
   }
+}
+function updpps(){
+  pps = t1f*mult*bmult*sps*(2**r1);
+  if (pps >= 1000) {
+    ppsdisp = pps.toExponential(2);
+  } else {
+    ppsdisp = pps.toFixed(0);
+  }
+  document.getElementById("pps").innerHTML = ppsdisp;
+  document.getElementById("pps2").innerHTML = ppsdisp;
 }
 var t1f = 1;
 var t2f = 0;
@@ -592,6 +594,7 @@ function prchtd(x){
 }
 setInterval(function(){incr(0.05*t1f*sps*mult*bmult*(2**r1));},50);
 setInterval(function(){upd();},50);
+setInterval(function(){updpps();},50);
 setInterval(function(){mf1(t2f*mult*sps*0.05);},50);
 setInterval(function(){mf2(t3f*mult*sps*0.05);},50);
 setInterval(function(){mf3(t4f*mult*sps*0.05);},50);
