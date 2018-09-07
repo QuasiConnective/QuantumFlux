@@ -536,6 +536,7 @@ function bh() {
   }
   document.getElementById("bmult").innerHTML = bmult;
 }
+var planb = 0;
 function bhtest() {
   if (bhmass <= 0) {
     if (r1 <= 100){
@@ -543,8 +544,9 @@ function bhtest() {
       a.style.display = "none"
       var b = document.getElementById("bhr");
       b.style.display = "block"
+      planb = 0;
     } else {
-      reset()
+      planb = 1;
     }
   } else {
     var a = document.getElementById("main");
@@ -669,6 +671,11 @@ function prchtd(x){
     }
   }
 }
+function planbf() {
+  if (planb = 1) {
+    reset()
+  }
+}
 setInterval(function(){incr(0.05*t1f*sps*mult*bmult*(2**r1));},50);
 setInterval(function(){upd();},50);
 setInterval(function(){mf1(t2f*mult*sps*0.05);},50);
@@ -683,3 +690,4 @@ setInterval(function(){bh();},50);
 setInterval(function(){bhtest();},50);
 setInterval(function(){t(0.05*sps);},50);
 setInterval(function(){save();},30000);
+setInterval(function(){planbf();},1000);
