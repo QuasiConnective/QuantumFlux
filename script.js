@@ -287,7 +287,7 @@ function prchf(x) {
       part -= 10;
       t1f += 1;
       if (t1f <= 1000) {
-        t1fdisp = t1f;
+        t1fdisp = t1f.toFixed(0);
       } else {
         t1fdisp = t1f.toExponential(2);
       }
@@ -299,7 +299,7 @@ function prchf(x) {
       part -= 1000;
       t2f += 1;
       if (t2f <= 1000) {
-        t2fdisp = t2f;
+        t2fdisp = t2f.toFixed(0);
       } else {
         t2fdisp = t2f.toExponential(2);
       }
@@ -311,7 +311,7 @@ function prchf(x) {
       part -= 1000000;
       t3f += 1;
       if (t3f <= 1000) {
-        t3fdisp = t3f;
+        t3fdisp = t3f.toFixed(0);
       } else {
         t3fdisp = t3f.toExponential(2);
       }
@@ -323,7 +323,7 @@ function prchf(x) {
       part -= 1000000000;
       t4f += 1;
       if (t4f <= 1000) {
-        t4fdisp = t4f;
+        t4fdisp = t4f.toFixed(0);
       } else {
         t4fdisp = t4f.toExponential(2);
       }
@@ -335,7 +335,7 @@ function prchf(x) {
       part -= 1000000000000;
       t5f += 1;
       if (t5f <= 1000) {
-        t5fdisp = t5f;
+        t5fdisp = t5f.toFixed(0);
       } else {
         t5fdisp = t5f.toExponential(2);
       }
@@ -347,7 +347,7 @@ function prchf(x) {
       part -= 1000000000000000000;
       t6f += 1;
       if (t6f <= 1000) {
-        t6fdisp = t6f;
+        t6fdisp = t6f.toFixed(0);
       } else {
         t6fdisp = t6f.toExponential(2);
       }
@@ -359,7 +359,7 @@ function prchf(x) {
       part -= 1000000000000000000000000;
       t7f += 1;
       if (t7f <= 1000) {
-        t7fdisp = t7f;
+        t7fdisp = t7f.toFixed(0);
       } else {
         t7fdisp = t7f.toExponential(2);
       }
@@ -371,7 +371,7 @@ function prchf(x) {
       part -= 1000000000000000000000000000000;
       t8f += 1;
       if (t8f <= 1000) {
-        t8fdisp = t8f;
+        t8fdisp = t8f.toFixed(0);
       } else {
         t8fdisp = t8f.toExponential(2);
       }
@@ -382,7 +382,7 @@ function prchf(x) {
 function mf1(x) {
   t1f += x;
   if (t1f <= 1000) {
-    t1fdisp = t1f;
+    t1fdisp = t1f.toFixed(0);
   } else {
     t1fdisp = t1f.toExponential(2);
   }
@@ -391,7 +391,7 @@ function mf1(x) {
 function mf2(x) {
   t2f += x;
   if (t2f <= 1000) {
-    t2fdisp = t2f;
+    t2fdisp = t2f.toFixed(0);
   } else {
     t2fdisp = t2f.toExponential(2);
   }
@@ -400,7 +400,7 @@ function mf2(x) {
 function mf3(x) {
   t3f += x;
   if (t3f <= 1000) {
-    t3fdisp = t3f;
+    t3fdisp = t3f.toFixed(0);
   } else {
     t3fdisp = t3f.toExponential(2);
   }
@@ -409,7 +409,7 @@ function mf3(x) {
 function mf4(x) {
   t4f += x;
   if (t4f <= 1000) {
-    t4fdisp = t4f;
+    t4fdisp = t4f.toFixed(0);
   } else {
     t4fdisp = t4f.toExponential(2);
   }
@@ -418,7 +418,7 @@ function mf4(x) {
 function mf5(x) {
   t5f += x;
   if (t5f <= 1000) {
-    t5fdisp = t5f;
+    t5fdisp = t5f.toFixed(0);
   } else {
     t5fdisp = t5f.toExponential(2);
   }
@@ -427,7 +427,7 @@ function mf5(x) {
 function mf6(x) {
   t6f += x;
   if (t6f <= 1000) {
-    t6fdisp = t6f;
+    t6fdisp = t6f.toFixed(0);
   } else {
     t6fdisp = t6f.toExponential(2);
   }
@@ -436,7 +436,7 @@ function mf6(x) {
 function mf7(x) {
   t7f += x;
   if (t7f <= 1000) {
-    t7fdisp = t7f;
+    t7fdisp = t7f.toFixed(0);
   } else {
     t7fdisp = t7f.toExponential(2);
   }
