@@ -3,7 +3,6 @@ function save() {
     part: part,
     tot: tot,
     tot2: tot2,
-    mult: mult,
     t1f: t1f,
     t2f: t2f,
     t3f: t3f,
@@ -35,7 +34,6 @@ function load() {
   part = savegame.part;
   tot = savegame.tot;
   tot2 = savegame.tot2;
-  mult = savegame.mult;
   t1f = savegame.t1f;
   t2f = savegame.t2f;
   t3f = savegame.t3f;
@@ -61,7 +59,6 @@ function clr() {
   part = 0;
   tot = 0;
   tot2 = 0;
-  mult = 1;
   t1f = 1;
   t2f = 0;
   t3f = 0;
@@ -117,6 +114,24 @@ var ppsdisp = 0;
 var sps = 1;
 var spsdisp = 1;
 function upd() {
+  if (boosts === 0) {
+    mult = 1;
+  }
+  if (boosts === 1) {
+    mult = 6;
+  }
+  if (boosts === 2) {
+    mult = 36;
+  }
+  if (boosts === 3) {
+    mult = 216;
+  }
+  if (boosts === 4) {
+    mult = 2592;
+  }
+  if (boosts === 5) {
+    mult = 77760;
+  }
   document.getElementById("partdisp2").innerHTML = partdisp;
   if (gs === 0) {
     var a = document.getElementById("gs0");
@@ -461,7 +476,7 @@ function prchb(x) {
       part -= 1000;
       mult *= 6;
       document.getElementById("mult").innerHTML = mult;
-      boosts += 1;
+      boosts = 1;
       var a = document.getElementById("b1");
       a.style.display = "none"
     }
@@ -471,7 +486,7 @@ function prchb(x) {
       part -= 1000000;
       mult *= 6;
       document.getElementById("mult").innerHTML = mult;
-      boosts += 1;
+      boosts = 2;
       var a = document.getElementById("b2");
       a.style.display = "none"
     }
@@ -481,7 +496,7 @@ function prchb(x) {
       part -= 1000000000;
       mult *= 6;
       document.getElementById("mult").innerHTML = mult;
-      boosts += 1;
+      boosts = 3;
       var a = document.getElementById("b3");
       a.style.display = "none"
     }
@@ -491,7 +506,7 @@ function prchb(x) {
       part -= 1000000000000;
       mult *= 12;
       document.getElementById("mult").innerHTML = mult;
-      boosts += 1;
+      boosts = 4;
       var a = document.getElementById("b4");
       a.style.display = "none"
     }
@@ -501,7 +516,7 @@ function prchb(x) {
       part -= 1000000000000000;
       mult *= 30;
       document.getElementById("mult").innerHTML = mult;
-      boosts += 1;
+      boosts = 5;
       var a = document.getElementById("b5");
       a.style.display = "none"
     }
