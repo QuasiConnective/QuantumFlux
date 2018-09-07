@@ -79,7 +79,7 @@ function clr() {
   r1 = 0;
   sing = 0;
   time = 0;
-  sps = 0;
+  sps = 1;
   localStorage.removeItem("save");
   document.getElementById("mult").innerHTML = mult;
   document.getElementById("sing").innerHTML = singdisp;
@@ -587,9 +587,11 @@ function reset() {
 }
 function prchtd(x){
   if (x === 0){
-    sing -= 5;
-    sps += 1
-    document.getElementById("sing").innerHTML = "singdisp"
+    if (sing >= 5){
+      sing -= 5;
+      sps += 1
+      document.getElementById("sing").innerHTML = "singdisp"
+    }
   }
 }
 setInterval(function(){incr(0.05*t1f*sps*mult*bmult*(2**r1));},50);
