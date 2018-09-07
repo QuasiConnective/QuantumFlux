@@ -193,6 +193,12 @@ function upd() {
   }
   document.getElementById("pps").innerHTML = ppsdisp;
   document.getElementById("pps2").innerHTML = ppsdisp;
+  if (sing >= 1000) {
+    singdisp = sing.toExponential(2);
+  } else {
+    singdisp = sing.toFixed(0);
+  }
+  document.getElementById("sing").innerHTML = singdisp;
   if (sps >= 1000) {
     spsdisp = sps.toExponential(2);
   } else {
@@ -566,7 +572,6 @@ function reset() {
   r1 += 1;
   sing += 1;
   document.getElementById("r1").innerHTML = r1;
-  document.getElementById("sing").innerHTML = singdisp;
   var c = document.getElementById("b1");
   c.style.display = "block"
   var d = document.getElementById("b2");
