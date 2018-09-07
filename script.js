@@ -616,6 +616,54 @@ function prchtd(x){
       sps += 3600;
     }
   }
+  if (x === 3){
+    if (sing >= 25){
+      sing -= 25;
+      sps += 86400;
+    }
+  }
+  if (x === 4){
+    if (sing >= 30){
+      sing -= 30;
+      sps += 604800;
+    }
+  }
+  if (x === 5){
+    if (sing >= 40){
+      sing -= 40;
+      sps += 2592000;
+    }
+  }
+  if (x === 6){
+    if (sing >= 50){
+      sing -= 50;
+      sps += 31536000;
+    }
+  }
+  if (x === 7){
+    if (sing >= 65){
+      sing -= 65;
+      sps += 315360000;
+    }
+  }
+  if (x === 8){
+    if (sing >= 80){
+      sing -= 80;
+      sps += 3153600000;
+    }
+  }
+  if (x === 9){
+    if (sing >= 100){
+      sing -= 100;
+      sps += 31536000000;
+    }
+  }
+  if (x === 10){
+    if (sing >= 250){
+      sing -= 250;
+      sps += 31536000000000;
+    }
+  }
 }
 setInterval(function(){incr(0.05*t1f*sps*mult*bmult*(2**r1));},50);
 setInterval(function(){upd();},50);
