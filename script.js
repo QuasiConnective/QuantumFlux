@@ -183,7 +183,7 @@ function upd() {
   if (bhmax >= 1e+61) {
     bhmax = 1e+60;
   }
-  pps = t1f*mult*bmult*(2**r1);
+  pps = t1f*mult*bmult*sps*(2**r1);
   if (pps >= 1000) {
     ppsdisp = pps.toExponential(2);
   } else {
