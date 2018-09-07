@@ -208,7 +208,7 @@ function upd() {
   if (bhmax >= 1e+61) {
     bhmax = 1e+60;
   }
-  pps = t1f*mult*bmult*sps*(2**r1);
+  pps = t1f*mult*bmult*(2**r1);
   if (pps >= 1000) {
     ppsdisp = pps.toExponential(2);
   } else {
@@ -690,15 +690,15 @@ function ttest() {
     b.style.display = "block"
   }
 }
-setInterval(function(){incr(0.05*t1f*sps*mult*bmult*(2**r1));},50);
+setInterval(function(){incr(0.05*t1f*mult*bmult*(2**r1));},50);
 setInterval(function(){upd();},50);
-setInterval(function(){mf1(t2f*mult*sps*0.05);},50);
-setInterval(function(){mf2(t3f*mult*sps*0.05);},50);
-setInterval(function(){mf3(t4f*mult*sps*0.05);},50);
-setInterval(function(){mf4(t5f*mult*sps*0.05);},50);
-setInterval(function(){mf5(t6f*mult*sps*0.05);},50);
-setInterval(function(){mf6(t7f*mult*sps*0.05);},50);
-setInterval(function(){mf7(t8f*mult*sps*0.05);},50);
+setInterval(function(){mf1(t2f*mult*0.05);},50);
+setInterval(function(){mf2(t3f*mult*0.05);},50);
+setInterval(function(){mf3(t4f*mult*0.05);},50);
+setInterval(function(){mf4(t5f*mult*0.05);},50);
+setInterval(function(){mf5(t6f*mult*0.05);},50);
+setInterval(function(){mf6(t7f*mult*0.05);},50);
+setInterval(function(){mf7(t8f*mult*0.05);},50);
 setInterval(function(){upds();},50);
 setInterval(function(){bh();},50);
 setInterval(function(){bhtest();},50);
