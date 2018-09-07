@@ -589,6 +589,18 @@ function prchtd(x){
       sps += 1;
     }
   }
+  if (x === 1){
+    if (sing >= 10){
+      sing -= 10;
+      sps += 60;
+    }
+  }
+  if (x === 2){
+    if (sing >= 15){
+      sing -= 15;
+      sps += 3600;
+    }
+  }
 }
 setInterval(function(){incr(0.05*t1f*sps*mult*bmult*(2**r1));},50);
 setInterval(function(){upd();},50);
