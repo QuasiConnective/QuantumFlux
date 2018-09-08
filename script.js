@@ -208,7 +208,7 @@ function upd() {
   if (bhmax >= 1e+61) {
     bhmax = 1e+60;
   }
-  pps = t1f*mult*bmult*(2**r1);
+  pps = t1f*mult*bmult*sps*(1.05**r1);
   if (pps >= 1000) {
     ppsdisp = pps.toExponential(2);
   } else {
@@ -697,7 +697,7 @@ function roht() {
     reset();
   }
 }
-setInterval(function(){incr(0.05*t1f*mult*bmult*(2**r1));},50);
+setInterval(function(){incr(0.05*t1f*mult*bmult*sps*(1.05**r1));},50);
 setInterval(function(){upd();},50);
 setInterval(function(){mf1(t2f*mult*0.05);},50);
 setInterval(function(){mf2(t3f*mult*0.05);},50);
