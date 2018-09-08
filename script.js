@@ -686,6 +686,9 @@ function ttest() {
     a.style.display = "none"
     var b = document.getElementById("pl2");
     b.style.display = "block"
+  } else {
+    var b = document.getElementById("pl2");
+    b.style.display = "none"
   }
 }
 setInterval(function(){incr(0.05*t1f*mult*bmult*sps*(1.05**r1));},50);
