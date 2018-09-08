@@ -549,12 +549,10 @@ function bh() {
 var r1oh = 0;
 function bhtest() {
   if (bhmass <= 0) {
-    if (r1 <= 100){
-      var a = document.getElementById("main");
-      a.style.display = "none"
-      var b = document.getElementById("bhr");
-      b.style.display = "block"
-    }
+    var a = document.getElementById("main");
+    a.style.display = "none"
+    var b = document.getElementById("bhr");
+    b.style.display = "block"
   } else {
     var a = document.getElementById("main");
     a.style.display = "block"
@@ -692,11 +690,6 @@ function ttest() {
     b.style.display = "block"
   }
 }
-function roht() {
-  if (r1 >= 100) {
-    reset();
-  }
-}
 setInterval(function(){incr(0.05*t1f*mult*bmult*sps*(1.05**r1));},50);
 setInterval(function(){upd();},50);
 setInterval(function(){mf1(t2f*mult*0.05);},50);
@@ -711,5 +704,4 @@ setInterval(function(){bh();},50);
 setInterval(function(){bhtest();},50);
 setInterval(function(){t(0.05*sps);},50);
 setInterval(function(){save();},30000);
-setInterval(function(){roht();},500);
 setInterval(function(){ttest();},50);
