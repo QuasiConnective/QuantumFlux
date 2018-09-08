@@ -685,10 +685,10 @@ function prchtd(x){
   }
 }
 function ttest() {
-  if (time >= 1.5e+17) {
+  if (time >= 1.6e+17) {
     var a = document.getElementById("main");
     a.style.display = "none"
-    var b = document.getElementById("bhr");
+    var b = document.getElementById("pl2");
     b.style.display = "block"
   }
 }
@@ -712,3 +712,4 @@ setInterval(function(){bhtest();},50);
 setInterval(function(){t(0.05*sps);},50);
 setInterval(function(){save();},30000);
 setInterval(function(){roht();},500);
+setInterval(function(){ttest();},50);
