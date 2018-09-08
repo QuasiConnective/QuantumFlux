@@ -554,8 +554,6 @@ function bhtest() {
     var b = document.getElementById("bhr");
     b.style.display = "block"
   } else {
-    var a = document.getElementById("main");
-    a.style.display = "block"
     var b = document.getElementById("bhr");
     b.style.display = "none"
   }
