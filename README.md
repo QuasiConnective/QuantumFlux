@@ -16,3 +16,7 @@ Boosts start at 1000₽ and multiply the speed of every fluctuator you own.
 The aim to make so many particles that your black hole is used up (can be monitored in the Black Hole tab) and you start the game over with a production multiplier and a bigger black hole.
 
 Favicon is from http://discovermagazine.com/2018/apr/black-hole-close-up. All credits go to Discover Magazine. I couldn't find any copyright information so I'm going to ignore it as always.
+
+CREDITS:
+    Logan McDonald  Head Developer, Only Developer, Styler, Coder, Organiser
+    Jayden Littolf  Professional Icon Find-image-of-interneter
