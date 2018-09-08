@@ -80,9 +80,6 @@ function clr() {
   localStorage.removeItem("save");
   document.getElementById("mult").innerHTML = mult;
 }
-function debug() {
-  incr(1e+60);
-}
 var part = 0;
 var partdisp = 0;
 var tot = 0;
@@ -286,6 +283,13 @@ function upds() {
     a.style.display = "block"
   } else {
     var a = document.getElementById("s10");
+    a.style.display = "none"
+  }
+  if (r1 >= 3) {
+    var a = document.getElementById("s11");
+    a.style.display = "block"
+  } else {
+    var a = document.getElementById("s11");
     a.style.display = "none"
   }
 }
