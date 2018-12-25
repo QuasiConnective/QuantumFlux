@@ -699,7 +699,7 @@ setInterval(function(){incr(0.05*t1f*mult*bmult*sps*(1.05**r1));},50);
 setInterval(function(){upd();},50);
 setInterval(function(){mf1(t2f*mult*sps*0.05);},50);
 setInterval(function(){mf2(t3f*mult*sps*0.05);},50);
-setInterval(function(){mf3(t4f*multsps**0.05);},50);
+setInterval(function(){mf3(t4f*mult*sps*0.05);},50);
 setInterval(function(){mf4(t5f*mult*sps*0.05);},50);
 setInterval(function(){mf5(t6f*mult*sps*0.05);},50);
 setInterval(function(){mf6(t7f*mult*sps*0.05);},50);
