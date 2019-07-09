@@ -3,7 +3,7 @@ Yay!
 
 This is a small game made with HTML, CSS and JavaScript
 
-Webpage: https://quasiconnective.github.io/QuantumFlux/
+Webpage: https://reinhardt-c.github.io/QuantumFlux/
 
 How to Play:
 
