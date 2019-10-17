@@ -22,7 +22,7 @@ function save() {
     font: font,
     sps: sps
   }
-  localStorage.setItem("save", JSON.stringify(save));
+  localStorage.setItem("qsave", JSON.stringify(save));
   var x = document.getElementById("autosave");
   x.className = "show";
   setTimeout(function () {
@@ -30,7 +30,7 @@ function save() {
   }, 3000);
 }
 function load() {
-  var savegame = JSON.parse(localStorage.getItem("save"));
+  var savegame = JSON.parse(localStorage.getItem("qsave"));
   part = savegame.part;
   tot = savegame.tot;
   tot2 = savegame.tot2;
