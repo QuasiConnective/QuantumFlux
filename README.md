@@ -19,4 +19,3 @@ Favicon is from http://discovermagazine.com/2018/apr/black-hole-close-up. All cr
 
 CREDITS:<br>
     Logan McDonald  Head Developer, Only Developer, Styler, Coder, Organiser<br>
-    Jayden Littolf  Professional Icon Find-image-of-interneter
